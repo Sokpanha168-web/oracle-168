@@ -1,0 +1,472 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\oracle c sharp project\\POS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|d:\\oracle c sharp project\\pos\\pos\\uc\\uc_customer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_customer.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|d:\\oracle c sharp project\\pos\\pos\\uc\\uc_report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_setting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|d:\\oracle c sharp project\\pos\\pos\\uc\\uccategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uccategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|d:\\oracle c sharp project\\pos\\pos\\uc\\ucsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\ucsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\frm_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\frm_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\frm_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\frm_payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\frm_receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\frm_receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\frm_receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\frm_receipt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\controller\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2426AFEA-D847-4623-87AC-12138B9E2F33}|POS\\POS.csproj|solutionrelative:pos\\controller\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|solutionrelative:pos\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|solutionrelative:pos\\uc\\uc_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|D:\\oracle c sharp project\\POS\\pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F87DFFB-4B3C-46D5-BF22-998D087523A0}|POS\\POS.csproj|solutionrelative:pos\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\oracle c sharp project\\POS\\POS\\Controller\\ControllerUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:POS\\Controller\\ControllerUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ucCategory.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\ucCategory.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\ucCategory.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\ucCategory.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\ucCategory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T00:39:10.28Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "uc_report.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_report.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_report.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_report.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_report.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:49:31.504Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs",
+              "RelativeDocumentMoniker": "POS\\Form1.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs [Design]",
+              "RelativeToolTip": "POS\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "uc_customer.Designer.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_customer.Designer.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_customer.Designer.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_customer.Designer.cs",
+              "RelativeToolTip": "POS\\uc\\uc_customer.Designer.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAlwFABAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T01:47:09.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs",
+              "RelativeDocumentMoniker": "POS\\Form1.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs",
+              "RelativeToolTip": "POS\\Form1.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAhwIEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "uc_dashboard.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_dashboard.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_dashboard.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_dashboard.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T15:00:10.069Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "uc_sale.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_sale.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_sale.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_sale.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_sale.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.227Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "uc_customer.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_customer.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_customer.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_customer.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.225Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "uc_setting.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_setting.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_setting.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_setting.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_setting.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:58:22.98Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "uc_product.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_product.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_product.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_product.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_product.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.226Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "uc_user.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_user.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_user.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.226Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ucSupplier.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\ucSupplier.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\ucSupplier.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\ucSupplier.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\ucSupplier.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T00:39:07.876Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "uc_sale.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_sale.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_sale.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_sale.cs",
+              "RelativeToolTip": "POS\\uc\\uc_sale.cs",
+              "ViewState": "AgIAAM0DAAAAAAAAAAAwwIUDAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T05:57:08.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "uc_stock.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_stock.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_stock.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_stock.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_stock.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T05:43:55.475Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frm_payment.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\frm_payment.cs",
+              "RelativeDocumentMoniker": "POS\\frm_payment.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\frm_payment.cs",
+              "RelativeToolTip": "POS\\frm_payment.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:36:00.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "uc_dashboard.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_dashboard.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_dashboard.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_dashboard.cs",
+              "RelativeToolTip": "POS\\uc\\uc_dashboard.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAswEsAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T15:02:02.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frm_payment.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\frm_payment.cs",
+              "RelativeDocumentMoniker": "POS\\frm_payment.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\frm_payment.cs [Design]",
+              "RelativeToolTip": "POS\\frm_payment.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-17T14:34:11.903Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "uc_user.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_user.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeToolTip": "POS\\uc\\uc_user.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "frm_receipt.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\frm_receipt.cs",
+              "RelativeDocumentMoniker": "POS\\frm_receipt.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\frm_receipt.cs",
+              "RelativeToolTip": "POS\\frm_receipt.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwCMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frm_receipt.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\frm_receipt.cs",
+              "RelativeDocumentMoniker": "POS\\frm_receipt.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\frm_receipt.cs [Design]",
+              "RelativeToolTip": "POS\\frm_receipt.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Controller\\StockController.cs",
+              "RelativeDocumentMoniker": "POS\\Controller\\StockController.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Controller\\StockController.cs",
+              "RelativeToolTip": "POS\\Controller\\StockController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAIwDsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-16T14:39:57.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Program.cs",
+              "RelativeDocumentMoniker": "POS\\Program.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Program.cs",
+              "RelativeToolTip": "POS\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T00:15:46.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "uc_user.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_user.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs [Design]",
+              "RelativeToolTip": "POS\\uc\\uc_user.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T00:16:04.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs",
+              "RelativeDocumentMoniker": "POS\\Form1.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Form1.cs [Design]",
+              "RelativeToolTip": "POS\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T00:30:28.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "uc_user.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeDocumentMoniker": "POS\\uc\\uc_user.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\uc\\uc_user.cs",
+              "RelativeToolTip": "POS\\uc\\uc_user.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T00:16:17.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ControllerUser.cs",
+              "DocumentMoniker": "D:\\oracle c sharp project\\POS\\POS\\Controller\\ControllerUser.cs",
+              "RelativeDocumentMoniker": "POS\\Controller\\ControllerUser.cs",
+              "ToolTip": "D:\\oracle c sharp project\\POS\\POS\\Controller\\ControllerUser.cs",
+              "RelativeToolTip": "POS\\Controller\\ControllerUser.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-25T08:23:10.221Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1470,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

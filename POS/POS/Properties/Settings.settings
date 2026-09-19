@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="POS_204_oracle.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="con_str" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">User Id=panha;DATA SOURCE=localhost:1521/FREE;PASSWORD=123</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

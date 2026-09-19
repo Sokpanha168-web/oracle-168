@@ -1,0 +1,178 @@
+﻿## PROCESSES
+Currently debugging:
+- POS.exe (PID: 12712)
+
+## EXCEPTION
+Exception Type: System.TypeInitializationException
+Exception Message: The type initializer for 'Krypton.Toolkit.KryptonManager' threw an exception.
+Inner Exceptions:
+1- System.TypeInitializationException:The type initializer for 'Krypton.Toolkit.PaletteMicrosoft365Blue' threw an exception.
+2- System.TypeInitializationException:The type initializer for 'Krypton.Toolkit.GlobalStaticValues' threw an exception.
+3- System.IO.FileLoadException:Could not load file or assembly 'System.Resources.Extensions, Version=9.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+4- System.IO.FileLoadException:Could not load file or assembly 'System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+The callstack context, if included, corresponds to the thread where this exception occurred. There is no need to identify this thread by other means.
+The top most frame in the callstack context should correspond to the place the exception message was thrown from. Code may or may not have been provided for it but can be requested.
+
+## CALLSTACK
+Thread ID: 23704
+[1] [External Code]
+[4] POS.exe!POS.Dashboard.InitializeComponent
+This is the current user focused stack frame. The provided locals context corresponds to this stack frame, but you may evaluate expressions and retrieve code for any frame.
+Code for the stack frame:
+```csharp POS\POS\Form1.Designer.cs
+29:         private void InitializeComponent()
+30:         {
+31:             this.panel1 = new System.Windows.Forms.Panel();
+32:             this.picmini = new System.Windows.Forms.PictureBox();
+33:             this.picexit = new System.Windows.Forms.PictureBox();
+34:             this.panel2 = new System.Windows.Forms.Panel();
+35:             this.Btnfrm2 = new Krypton.Toolkit.KryptonButton();
+36:             this.btnfrm1 = new Krypton.Toolkit.KryptonButton();
+37:             this.Pages = new Krypton.Navigator.KryptonNavigator();
+38:             this.panel1.SuspendLayout();
+39:             ((System.ComponentModel.ISupportInitialize)(this.picmini)).BeginInit();
+40:             ((System.ComponentModel.ISupportInitialize)(this.picexit)).BeginInit();
+41:             this.panel2.SuspendLayout();
+42:             ((System.ComponentModel.ISupportInitialize)(this.Pages)).BeginInit();
+43:             this.Pages.SuspendLayout();
+44:             this.SuspendLayout();
+45:             // 
+46:             // panel1
+47:             // 
+48:             this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
+49:             this.panel1.Controls.Add(this.picmini);
+50:             this.panel1.Controls.Add(this.picexit);
+51:             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+52:             this.panel1.Location = new System.Drawing.Point(0, 0);
+53:             this.panel1.Name = "panel1";
+54:             this.panel1.Size = new System.Drawing.Size(1382, 62);
+55:             this.panel1.TabIndex = 0;
+56:             // 
+57:             // picmini
+58:             // 
+59:             this.picmini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+60:             this.picmini.Image = global::POS.Properties.Resources.web_button;
+61:             this.picmini.Location = new System.Drawing.Point(1244, 4);
+62:             this.picmini.Name = "picmini";
+63:             this.picmini.Size = new System.Drawing.Size(55, 55);
+64:             this.picmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+65:             this.picmini.TabIndex = 2;
+66:             this.picmini.TabStop = false;
+67:             this.picmini.Click += new System.EventHandler(this.picmini_Click);
+68:             // 
+69:             // picexit
+70:             // 
+71:             this.picexit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+72:             this.picexit.Image = global::POS.Properties.Resources.power_on;
+73:             this.picexit.Location = new System.Drawing.Point(1311, 4);
+74:             this.picexit.Name = "picexit";
+75:             this.picexit.Size = new System.Drawing.Size(58, 55);
+76:             this.picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+77:             this.picexit.TabIndex = 1;
+78:             this.picexit.TabStop = false;
+79:             this.picexit.Click += new System.EventHandler(this.picexit_Click);
+80:             // 
+81:             // panel2
+82:             // 
+83:             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+84:             this.panel2.Controls.Add(this.Btnfrm2);
+85:             this.panel2.Controls.Add(this.btnfrm1);
+86:             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+87:             this.panel2.Location = new System.Drawing.Point(0, 62);
+88:             this.panel2.Name = "panel2";
+89:             this.panel2.Size = new System.Drawing.Size(196, 754);
+90:             this.panel2.TabIndex = 1;
+91:             // 
+92:             // Btnfrm2
+93:             // 
+94:             this.Btnfrm2.Location = new System.Drawing.Point(25, 96);
+95:             this.Btnfrm2.Name = "Btnfrm2";
+96:             this.Btnfrm2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007SilverDarkMode;
+97:             this.Btnfrm2.Size = new System.Drawing.Size(147, 56);
+98:             this.Btnfrm2.StatePressed.Content.Padding = new System.Windows.Forms.Padding(5);
+99:             this.Btnfrm2.TabIndex = 3;
+100:             this.Btnfrm2.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+101:             this.Btnfrm2.Values.Text = "Form 2";
+102:             this.Btnfrm2.Click += new System.EventHandler(this.Btnfrm2_Click);
+103:             // 
+104:             // btnfrm1
+105:             // 
+106:             this.btnfrm1.Location = new System.Drawing.Point(25, 21);
+107:             this.btnfrm1.Name = "btnfrm1";
+108:             this.btnfrm1.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007SilverDarkMode;
+109:             this.btnfrm1.Size = new System.Drawing.Size(147, 56);
+110:             this.btnfrm1.StatePressed.Content.Padding = new System.Windows.Forms.Padding(5);
+111:             this.btnfrm1.TabIndex = 2;
+112:             this.btnfrm1.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+113:             this.btnfrm1.Values.Text = "USER";
+114:             this.btnfrm1.Click += new System.EventHandler(this.btnfrm1_Click);
+115:             // 
+116:             // Pages
+117:             // 
+118:             this.Pages.ControlKryptonFormFeatures = false;
+119:             this.Pages.Dock = System.Windows.Forms.DockStyle.Fill;
+120:             this.Pages.Location = new System.Drawing.Point(196, 62);
+121:             this.Pages.NavigatorMode = Krypton.Navigator.NavigatorMode.BarTabGroup;
+122:             this.Pages.Owner = null;
+123:             this.Pages.PageBackStyle = Krypton.Toolkit.PaletteBackStyle.PanelClient;
+124:             this.Pages.Size = new System.Drawing.Size(1186, 754);
+125:             this.Pages.TabIndex = 2;
+126:             this.Pages.Text = "kryptonNavigator1";
+127:             // 
+128:             // Dashboard
+129:             // 
+130:             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+131:             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+132:             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+133:             this.ClientSize = new System.Drawing.Size(1382, 816);
+134:             this.Controls.Add(this.Pages);
+135:             this.Controls.Add(this.panel2);
+136:             this.Controls.Add(this.panel1);
+137:             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+138:             this.Name = "Dashboard";
+139:             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+140:             this.Text = "Form1";
+141:             this.TopMost = true;
+142:             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+143:             this.Load += new System.EventHandler(this.Form1_Load);
+144:             this.panel1.ResumeLayout(false);
+145:             ((System.ComponentModel.ISupportInitialize)(this.picmini)).EndInit();
+146:             ((System.ComponentModel.ISupportInitialize)(this.picexit)).EndInit();
+147:             this.panel2.ResumeLayout(false);
+148:             ((System.ComponentModel.ISupportInitialize)(this.Pages)).EndInit();
+149:             this.Pages.ResumeLayout(false);
+150:             this.ResumeLayout(false);
+151: 
+152:         }
+```
+Current statement: line 35
+[5] POS.exe!POS.Dashboard.Dashboard
+Code for the stack frame:
+```csharp POS\POS\Form1.cs
+17:         public Dashboard()
+18:         {
+19:             InitializeComponent();
+20:             this.FormBorderStyle = FormBorderStyle.None;
+21:             this.StartPosition = FormStartPosition.Manual;
+22:             this.Top = 0;
+23:             this.Height = Screen.PrimaryScreen.WorkingArea.Height;
+24:             this.Width = Screen.PrimaryScreen.WorkingArea.Width;
+25:         }
+```
+Current statement: line 19
+[6] POS.exe!POS.Program.Main
+Code for the stack frame:
+```csharp POS\POS\Program.cs
+21:         [STAThread]
+22:         static void Main()
+23:         {
+24:             Application.EnableVisualStyles();
+25:             Application.SetCompatibleTextRenderingDefault(false);
+26:             Application.Run(new Dashboard());
+27:         }
+```
+Current statement: line 26
+
+## LOCALS
+Variable: 'this' of type 'POS.Dashboard' is a complex object with child properties and has value: {POS.Dashboard, Text: }
+
