@@ -90,10 +90,10 @@ namespace POS_204_oracle.uc
             currentMode = mode;
 
             // Update mode buttons styling
-            Color activeBg = Color.FromArgb(37, 99, 235);
-            Color activeText = Color.White;
-            Color inActiveBg = Color.FromArgb(241, 245, 249);
-            Color inActiveText = Color.FromArgb(30, 41, 59);
+            Color activeBg = Color.FromArgb(16, 185, 129);
+            Color activeText = Color.FromArgb(10, 14, 23);
+            Color inActiveBg = Color.FromArgb(24, 34, 54);
+            Color inActiveText = Color.FromArgb(148, 163, 184);
 
             btnModeSales.StateCommon.Back.Color1 = mode == ReportMode.Sales ? activeBg : inActiveBg;
             btnModeSales.StateCommon.Back.Color2 = mode == ReportMode.Sales ? activeBg : inActiveBg;

@@ -38,34 +38,13 @@ namespace POS_204_oracle.uc
 
         private void ConfigureGrids()
         {
-            FormatGridBase(dgTopProds);
-            FormatGridBase(dgRecentSales);
+            UITheme.ApplyGridTheme(dgTopProds);
+            UITheme.ApplyGridTheme(dgRecentSales);
         }
 
         private void FormatGridBase(DataGridView dg)
         {
-            dg.BorderStyle = BorderStyle.None;
-            dg.BackgroundColor = Color.White;
-            dg.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dg.GridColor = Color.FromArgb(241, 245, 249);
-            dg.EnableHeadersVisualStyles = false;
-            dg.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dg.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(30, 41, 59);
-            dg.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dg.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
-            dg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dg.ColumnHeadersHeight = 32;
-            dg.RowTemplate.Height = 28;
-            dg.DefaultCellStyle.Font = new Font("Segoe UI", 8.5F);
-            dg.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 242, 254);
-            dg.DefaultCellStyle.SelectionForeColor = Color.FromArgb(15, 23, 42);
-            dg.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 250, 252);
-            dg.RowHeadersVisible = false;
-            dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dg.MultiSelect = false;
-            dg.ReadOnly = true;
-            dg.AllowUserToAddRows = false;
-            dg.AllowUserToResizeRows = false;
+            UITheme.ApplyGridTheme(dg);
         }
 
         public void LoadDashboardData()
@@ -178,7 +157,7 @@ namespace POS_204_oracle.uc
                 dgRecentSales.Columns["Grand Total ($)"].DefaultCellStyle.Format = "$#,##0.00";
                 dgRecentSales.Columns["Grand Total ($)"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgRecentSales.Columns["Grand Total ($)"].DefaultCellStyle.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
-                dgRecentSales.Columns["Grand Total ($)"].DefaultCellStyle.ForeColor = Color.FromArgb(37, 99, 235);
+                dgRecentSales.Columns["Grand Total ($)"].DefaultCellStyle.ForeColor = UITheme.Primary;
             }
             if (dgRecentSales.Columns.Contains("Paid ($)"))
             {
@@ -208,7 +187,7 @@ namespace POS_204_oracle.uc
             {
                 using (Font f = new Font("Segoe UI", 9.5F))
                 {
-                    TextRenderer.DrawText(g, "No sales recorded in the past 7 days.", f, new Point(20, h / 2 - 10), Color.FromArgb(100, 116, 139));
+                    TextRenderer.DrawText(g, "No sales recorded in the past 7 days.", f, new Point(20, h / 2 - 10), UITheme.TextMuted);
                 }
                 return;
             }
@@ -221,7 +200,7 @@ namespace POS_204_oracle.uc
             if (maxRev <= 0) maxRev = 100m; // Default ceiling
 
             // Draw horizontal guide lines & Y-axis labels
-            using (Pen linePen = new Pen(Color.FromArgb(226, 232, 240), 1))
+            using (Pen linePen = new Pen(UITheme.CardBorder, 1))
             using (Font fAxis = new Font("Segoe UI", 7.5F))
             {
                 for (int i = 0; i <= 4; i++)
@@ -230,12 +209,12 @@ namespace POS_204_oracle.uc
                     g.DrawLine(linePen, padLeft, y, padLeft + chartW, y);
                     decimal val = maxRev - (maxRev * i / 4);
                     string label = "$" + (val >= 1000 ? (val / 1000m).ToString("0.#") + "k" : val.ToString("0"));
-                    TextRenderer.DrawText(g, label, fAxis, new Rectangle(0, y - 8, padLeft - 5, 16), Color.FromArgb(148, 163, 184), TextFormatFlags.Right);
+                    TextRenderer.DrawText(g, label, fAxis, new Rectangle(0, y - 8, padLeft - 5, 16), UITheme.TextMuted, TextFormatFlags.Right);
                 }
             }
 
             // Draw solid baseline
-            using (Pen basePen = new Pen(Color.FromArgb(203, 213, 225), 1.5F))
+            using (Pen basePen = new Pen(UITheme.CardBorder, 1.5F))
             {
                 g.DrawLine(basePen, padLeft, padTop + chartH, padLeft + chartW, padTop + chartH);
             }
@@ -247,7 +226,7 @@ namespace POS_204_oracle.uc
             using (Font fVal = new Font("Segoe UI", 8F, FontStyle.Bold))
             using (Font fDayName = new Font("Segoe UI", 7.5F, FontStyle.Bold))
             using (Font fDayDate = new Font("Segoe UI", 7F))
-            using (SolidBrush dotBrush = new SolidBrush(Color.FromArgb(203, 213, 225)))
+            using (SolidBrush dotBrush = new SolidBrush(UITheme.CardBorder))
             {
                 for (int i = 0; i < n; i++)
                 {
@@ -264,8 +243,8 @@ namespace POS_204_oracle.uc
                     {
                         using (LinearGradientBrush brush = new LinearGradientBrush(
                             new Rectangle(x, y, barW, barHeight),
-                            Color.FromArgb(59, 130, 246),
-                            Color.FromArgb(37, 99, 235),
+                            UITheme.Primary,
+                            UITheme.Secondary,
                             LinearGradientMode.Vertical))
                         {
                             g.FillRectangle(brush, x, y, barW, barHeight);
@@ -274,7 +253,7 @@ namespace POS_204_oracle.uc
                         // Value label on top of bar
                         string revText = pt.Revenue % 1 == 0 ? $"${pt.Revenue:N0}" : $"${pt.Revenue:N2}";
                         Rectangle textRect = new Rectangle(x - 14, Math.Max(4, y - 18), barW + 28, 16);
-                        TextRenderer.DrawText(g, revText, fVal, textRect, Color.FromArgb(15, 23, 42), TextFormatFlags.HorizontalCenter);
+                        TextRenderer.DrawText(g, revText, fVal, textRect, UITheme.TextWhite, TextFormatFlags.HorizontalCenter);
                     }
                     else
                     {
@@ -287,8 +266,8 @@ namespace POS_204_oracle.uc
                     string dateStr = pt.Date.ToString("MM/dd");
                     Rectangle rDayName = new Rectangle(xCenter - (barSlot / 2), padTop + chartH + 3, barSlot, 14);
                     Rectangle rDayDate = new Rectangle(xCenter - (barSlot / 2), padTop + chartH + 17, barSlot, 14);
-                    TextRenderer.DrawText(g, dayName, fDayName, rDayName, Color.FromArgb(51, 65, 85), TextFormatFlags.HorizontalCenter);
-                    TextRenderer.DrawText(g, dateStr, fDayDate, rDayDate, Color.FromArgb(100, 116, 139), TextFormatFlags.HorizontalCenter);
+                    TextRenderer.DrawText(g, dayName, fDayName, rDayName, UITheme.TextWhite, TextFormatFlags.HorizontalCenter);
+                    TextRenderer.DrawText(g, dateStr, fDayDate, rDayDate, UITheme.TextMuted, TextFormatFlags.HorizontalCenter);
                 }
             }
         }

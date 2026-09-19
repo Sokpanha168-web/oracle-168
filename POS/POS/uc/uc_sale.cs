@@ -119,8 +119,8 @@ namespace POS_204_oracle.uc
                     Tag = 0,
                     Size = new Size(65, 28),
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.FromArgb(37, 99, 235), // Active blue
-                    ForeColor = Color.White,
+                    BackColor = Color.FromArgb(16, 185, 129), // Emerald
+                    ForeColor = Color.FromArgb(10, 14, 23),
                     Font = new Font("Segoe UI", 9F, FontStyle.Bold),
                     Cursor = Cursors.Hand,
                     Margin = new Padding(3, 2, 3, 2)
@@ -143,8 +143,8 @@ namespace POS_204_oracle.uc
                         Height = 28,
                         MinimumSize = new Size(70, 28),
                         FlatStyle = FlatStyle.Flat,
-                        BackColor = Color.FromArgb(241, 245, 249),
-                        ForeColor = Color.FromArgb(51, 65, 85),
+                        BackColor = Color.FromArgb(24, 34, 54),
+                        ForeColor = Color.FromArgb(148, 163, 184),
                         Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
                         Cursor = Cursors.Hand,
                         Margin = new Padding(3, 2, 3, 2)
@@ -173,13 +173,13 @@ namespace POS_204_oracle.uc
                 {
                     if (b == btn)
                     {
-                        b.BackColor = Color.FromArgb(37, 99, 235);
-                        b.ForeColor = Color.White;
+                        b.BackColor = Color.FromArgb(16, 185, 129);
+                        b.ForeColor = Color.FromArgb(10, 14, 23);
                     }
                     else
                     {
-                        b.BackColor = Color.FromArgb(241, 245, 249);
-                        b.ForeColor = Color.FromArgb(51, 65, 85);
+                        b.BackColor = Color.FromArgb(24, 34, 54);
+                        b.ForeColor = Color.FromArgb(148, 163, 184);
                     }
                 }
             }
@@ -253,7 +253,7 @@ namespace POS_204_oracle.uc
                 {
                     Width = 118,
                     Height = 155,
-                    BackColor = Color.White,
+                    BackColor = Color.FromArgb(20, 28, 45),
                     Margin = new Padding(5),
                     Cursor = Cursors.Hand,
                     Tag = prodId
@@ -262,7 +262,7 @@ namespace POS_204_oracle.uc
                 // Border paint
                 card.Paint += (s, pe) =>
                 {
-                    pe.Graphics.DrawRectangle(new Pen(Color.FromArgb(226, 232, 240), 1), 0, 0, card.Width - 1, card.Height - 1);
+                    pe.Graphics.DrawRectangle(new Pen(Color.FromArgb(38, 52, 80), 1), 0, 0, card.Width - 1, card.Height - 1);
                 };
 
                 // Product Image
@@ -271,7 +271,7 @@ namespace POS_204_oracle.uc
                     Dock = DockStyle.Top,
                     Height = 80,
                     SizeMode = PictureBoxSizeMode.Zoom,
-                    BackColor = Color.FromArgb(248, 250, 252),
+                    BackColor = Color.FromArgb(10, 14, 23),
                     Tag = prodId
                 };
 
@@ -307,7 +307,7 @@ namespace POS_204_oracle.uc
                     Height = 30,
                     Text = prodName,
                     Font = new Font("Segoe UI", 8.25F, FontStyle.Bold),
-                    ForeColor = Color.FromArgb(15, 23, 42),
+                    ForeColor = Color.FromArgb(248, 250, 252),
                     TextAlign = ContentAlignment.MiddleCenter,
                     AutoEllipsis = true,
                     Tag = prodId
@@ -320,7 +320,7 @@ namespace POS_204_oracle.uc
                     Height = 16,
                     Text = stock <= 0 ? "Out of Stock" : $"Stock: {stock:N0}",
                     Font = new Font("Segoe UI", 7F, stock <= 0 ? FontStyle.Bold : FontStyle.Regular),
-                    ForeColor = stock <= 0 ? Color.FromArgb(220, 38, 38) : Color.FromArgb(100, 116, 139),
+                    ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(148, 163, 184),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };
@@ -332,7 +332,7 @@ namespace POS_204_oracle.uc
                     Height = 22,
                     Text = $"${price:N2}",
                     Font = new Font("Segoe UI", 9.5F, FontStyle.Bold),
-                    ForeColor = Color.FromArgb(37, 99, 235), // Royal blue
+                    ForeColor = Color.FromArgb(16, 185, 129), // Emerald
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };

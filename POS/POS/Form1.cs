@@ -41,15 +41,15 @@ namespace POS_204_oracle
             {
                 if (btn == activeButton)
                 {
-                    btn.BackColor = Color.FromArgb(37, 99, 235);
+                    btn.BackColor = UITheme.Primary;
                     btn.ForeColor = Color.White;
-                    btn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+                    btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
                 }
                 else
                 {
-                    btn.BackColor = Color.FromArgb(30, 41, 59);
-                    btn.ForeColor = Color.FromArgb(226, 232, 240);
-                    btn.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular);
+                    btn.BackColor = UITheme.BgSidebar;
+                    btn.ForeColor = UITheme.TextMuted;
+                    btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
                 }
             }
         }
@@ -77,7 +77,8 @@ namespace POS_204_oracle
 
             TabPage p = new TabPage();
             p.Text = txt;
-            p.BackColor = Color.FromArgb(241, 245, 249);
+            p.BackColor = UITheme.BgDark;
+            p.ForeColor = UITheme.TextWhite;
             uc.Dock = DockStyle.Fill;
             p.Controls.Add(uc);
             MainTab.TabPages.Add(p);
@@ -290,7 +291,7 @@ namespace POS_204_oracle
             bool isSelected = (MainTab.SelectedIndex == e.Index);
 
             // Tab background fill
-            Color bgColor = isSelected ? Color.White : Color.FromArgb(226, 232, 240);
+            Color bgColor = isSelected ? UITheme.CardBg : UITheme.BgSidebar;
             using (SolidBrush bgBrush = new SolidBrush(bgColor))
             {
                 e.Graphics.FillRectangle(bgBrush, rect);
@@ -299,7 +300,7 @@ namespace POS_204_oracle
             // Top active accent line for selected tab
             if (isSelected)
             {
-                using (SolidBrush accentBrush = new SolidBrush(Color.FromArgb(37, 99, 235)))
+                using (SolidBrush accentBrush = new SolidBrush(UITheme.Primary))
                 {
                     e.Graphics.FillRectangle(accentBrush, rect.X, rect.Y, rect.Width, 3);
                 }
@@ -309,7 +310,7 @@ namespace POS_204_oracle
             string title = page.Text;
             using (Font tabFont = new Font("Segoe UI", 9F, isSelected ? FontStyle.Bold : FontStyle.Regular))
             {
-                Color textColor = isSelected ? Color.FromArgb(30, 41, 59) : Color.FromArgb(100, 116, 139);
+                Color textColor = isSelected ? UITheme.TextWhite : UITheme.TextDim;
                 Rectangle textRect = new Rectangle(rect.X + 10, rect.Y, rect.Width - 32, rect.Height);
                 TextRenderer.DrawText(e.Graphics, title, tabFont, textRect, textColor, TextFormatFlags.Left | TextFormatFlags.VerticalCenter);
             }
@@ -318,7 +319,7 @@ namespace POS_204_oracle
             Rectangle closeRect = new Rectangle(rect.Right - 22, rect.Top + (rect.Height - 16) / 2, 16, 16);
             using (Font closeFont = new Font("Segoe UI", 9F, FontStyle.Bold))
             {
-                Color closeColor = isSelected ? Color.FromArgb(148, 163, 184) : Color.FromArgb(160, 174, 192);
+                Color closeColor = isSelected ? UITheme.PrimaryHover : UITheme.TextDim;
                 TextRenderer.DrawText(e.Graphics, "×", closeFont, closeRect, closeColor, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
             }
         }

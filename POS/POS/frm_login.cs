@@ -51,7 +51,7 @@ namespace POS_204_oracle
 
         private void frm_login_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen pen = new Pen(Color.FromArgb(203, 213, 225), 1))
+            using (Pen pen = new Pen(UITheme.CardBorder, 1))
             {
                 e.Graphics.DrawRectangle(pen, 0, 0, this.Width - 1, this.Height - 1);
             }

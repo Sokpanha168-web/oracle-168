@@ -72,25 +72,7 @@ namespace POS_204_oracle
         }
 
         public static void MyDG(DataGridView dg) {
-            dg.BorderStyle = BorderStyle.None;
-            dg.BackgroundColor = Color.White;
-            dg.AllowUserToAddRows = false;
-            dg.AllowUserToResizeRows = false;
-            dg.ReadOnly = true;
-            dg.RowHeadersVisible = false;
-            dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dg.MultiSelect = false;
-            dg.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dg.AlternatingRowsDefaultCellStyle.BackColor = Color.WhiteSmoke;
-            dg.RowTemplate.Height = 50;
-            dg.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dg.EnableHeadersVisualStyles = false;
-            dg.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGray;
-            dg.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.DarkGray;
-            dg.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dg.ColumnHeadersHeight = 40;
-
+            UITheme.ApplyGridTheme(dg);
         }
 
 

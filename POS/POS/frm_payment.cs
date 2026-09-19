@@ -52,36 +52,36 @@ namespace POS_204_oracle
 
                 if (ChangeDue >= 0)
                 {
-                    pnlChangeCard.BackColor = Color.FromArgb(236, 253, 245);
+                    pnlChangeCard.BackColor = Color.FromArgb(18, 36, 32);
                     lblChangeCaption.Text = "CHANGE DUE TO CUSTOMER";
-                    lblChangeCaption.ForeColor = Color.FromArgb(6, 95, 70);
+                    lblChangeCaption.ForeColor = UITheme.PrimaryHover;
                     lblChangeVal.Text = "+ $" + ChangeDue.ToString("N2");
-                    lblChangeVal.ForeColor = Color.FromArgb(4, 120, 87);
+                    lblChangeVal.ForeColor = UITheme.PrimaryHover;
                     lblChangeKHR.Text = $"KHR ~ {(ChangeDue * _exchangeRate):N0} ៛";
-                    lblChangeKHR.ForeColor = Color.FromArgb(5, 150, 105);
+                    lblChangeKHR.ForeColor = UITheme.Primary;
                 }
                 else
                 {
-                    pnlChangeCard.BackColor = Color.FromArgb(254, 242, 242);
+                    pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
                     lblChangeCaption.Text = "AMOUNT STILL DUE (UNDERPAID)";
-                    lblChangeCaption.ForeColor = Color.FromArgb(153, 27, 27);
+                    lblChangeCaption.ForeColor = Color.FromArgb(248, 113, 113);
                     lblChangeVal.Text = "- $" + Math.Abs(ChangeDue).ToString("N2");
-                    lblChangeVal.ForeColor = Color.FromArgb(220, 38, 38);
+                    lblChangeVal.ForeColor = Color.FromArgb(248, 113, 113);
                     lblChangeKHR.Text = $"Short: {(Math.Abs(ChangeDue) * _exchangeRate):N0} ៛";
-                    lblChangeKHR.ForeColor = Color.FromArgb(220, 38, 38);
+                    lblChangeKHR.ForeColor = Color.FromArgb(248, 113, 113);
                 }
             }
             else
             {
                 AmountPaid = 0m;
                 ChangeDue = -_grandTotal;
-                pnlChangeCard.BackColor = Color.FromArgb(254, 242, 242);
+                pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
                 lblChangeCaption.Text = "INVALID AMOUNT ENTERED";
-                lblChangeCaption.ForeColor = Color.FromArgb(153, 27, 27);
+                lblChangeCaption.ForeColor = Color.FromArgb(248, 113, 113);
                 lblChangeVal.Text = "$0.00";
-                lblChangeVal.ForeColor = Color.FromArgb(220, 38, 38);
+                lblChangeVal.ForeColor = Color.FromArgb(248, 113, 113);
                 lblChangeKHR.Text = "Enter numbers only";
-                lblChangeKHR.ForeColor = Color.FromArgb(220, 38, 38);
+                lblChangeKHR.ForeColor = Color.FromArgb(248, 113, 113);
             }
 
             pnlChangeCard.Invalidate();

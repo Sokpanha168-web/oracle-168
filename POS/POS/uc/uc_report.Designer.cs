@@ -69,6 +69,7 @@ namespace POS_204_oracle.uc
             // 
             // pnlTop
             // 
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.pnlTop.Controls.Add(this.cardHeader);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
@@ -82,13 +83,13 @@ namespace POS_204_oracle.uc
             this.cardHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cardHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardHeader.Controls.Add(this.lblTitle);
             this.cardHeader.Controls.Add(this.btnModeSales);
             this.cardHeader.Controls.Add(this.btnModeInventory);
             this.cardHeader.Controls.Add(this.btnModeCustomers);
             this.cardHeader.Depth = 0;
-            this.cardHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardHeader.Location = new System.Drawing.Point(19, 7);
             this.cardHeader.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardHeader.MouseState = MaterialSkin.MouseState.HOVER;
@@ -101,7 +102,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblTitle.Location = new System.Drawing.Point(19, 12);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
@@ -118,10 +119,10 @@ namespace POS_204_oracle.uc
             this.btnModeSales.Margin = new System.Windows.Forms.Padding(4);
             this.btnModeSales.Name = "btnModeSales";
             this.btnModeSales.Size = new System.Drawing.Size(173, 44);
-            this.btnModeSales.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.btnModeSales.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
+            this.btnModeSales.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnModeSales.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(150)))), ((int)(((byte)(105)))));
             this.btnModeSales.StateCommon.Border.Rounding = 6F;
-            this.btnModeSales.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnModeSales.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.btnModeSales.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModeSales.TabIndex = 2;
             this.btnModeSales.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -137,11 +138,11 @@ namespace POS_204_oracle.uc
             this.btnModeInventory.Margin = new System.Windows.Forms.Padding(4);
             this.btnModeInventory.Name = "btnModeInventory";
             this.btnModeInventory.Size = new System.Drawing.Size(187, 44);
-            this.btnModeInventory.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnModeInventory.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnModeInventory.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnModeInventory.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnModeInventory.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnModeInventory.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.btnModeInventory.StateCommon.Border.Rounding = 6F;
-            this.btnModeInventory.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnModeInventory.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.btnModeInventory.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModeInventory.TabIndex = 3;
             this.btnModeInventory.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -157,11 +158,11 @@ namespace POS_204_oracle.uc
             this.btnModeCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.btnModeCustomers.Name = "btnModeCustomers";
             this.btnModeCustomers.Size = new System.Drawing.Size(173, 44);
-            this.btnModeCustomers.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnModeCustomers.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnModeCustomers.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnModeCustomers.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnModeCustomers.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnModeCustomers.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.btnModeCustomers.StateCommon.Border.Rounding = 6F;
-            this.btnModeCustomers.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnModeCustomers.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.btnModeCustomers.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnModeCustomers.TabIndex = 4;
             this.btnModeCustomers.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -170,6 +171,7 @@ namespace POS_204_oracle.uc
             // 
             // pnlFilters
             // 
+            this.pnlFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.pnlFilters.Controls.Add(this.cardFilters);
             this.pnlFilters.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilters.Location = new System.Drawing.Point(0, 94);
@@ -183,7 +185,7 @@ namespace POS_204_oracle.uc
             this.cardFilters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cardFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardFilters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardFilters.Controls.Add(this.lblPreset);
             this.cardFilters.Controls.Add(this.cboPreset);
             this.cardFilters.Controls.Add(this.lblFrom);
@@ -194,7 +196,7 @@ namespace POS_204_oracle.uc
             this.cardFilters.Controls.Add(this.cboCustomer);
             this.cardFilters.Controls.Add(this.btnPrint);
             this.cardFilters.Depth = 0;
-            this.cardFilters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardFilters.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardFilters.Location = new System.Drawing.Point(19, 7);
             this.cardFilters.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardFilters.MouseState = MaterialSkin.MouseState.HOVER;
@@ -207,7 +209,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblPreset.AutoSize = true;
             this.lblPreset.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblPreset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.lblPreset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblPreset.Location = new System.Drawing.Point(19, 22);
             this.lblPreset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreset.Name = "lblPreset";
@@ -229,7 +231,10 @@ namespace POS_204_oracle.uc
             this.cboPreset.Margin = new System.Windows.Forms.Padding(4);
             this.cboPreset.Name = "cboPreset";
             this.cboPreset.Size = new System.Drawing.Size(147, 30);
+            this.cboPreset.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboPreset.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.cboPreset.StateCommon.ComboBox.Border.Rounding = 6F;
+            this.cboPreset.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cboPreset.TabIndex = 1;
             this.cboPreset.SelectedIndexChanged += new System.EventHandler(this.cboPreset_SelectedIndexChanged);
             // 
@@ -237,7 +242,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblFrom.AutoSize = true;
             this.lblFrom.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.lblFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblFrom.Location = new System.Drawing.Point(253, 22);
             this.lblFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFrom.Name = "lblFrom";
@@ -247,6 +252,9 @@ namespace POS_204_oracle.uc
             // 
             // dtpFrom
             // 
+            this.dtpFrom.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dtpFrom.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.dtpFrom.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.dtpFrom.CustomFormat = "yyyy-MM-dd";
             this.dtpFrom.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -260,7 +268,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblTo.AutoSize = true;
             this.lblTo.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.lblTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblTo.Location = new System.Drawing.Point(463, 22);
             this.lblTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTo.Name = "lblTo";
@@ -270,6 +278,9 @@ namespace POS_204_oracle.uc
             // 
             // dtpTo
             // 
+            this.dtpTo.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.dtpTo.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.dtpTo.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.dtpTo.CustomFormat = "yyyy-MM-dd";
             this.dtpTo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -283,7 +294,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblCustomer.AutoSize = true;
             this.lblCustomer.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(85)))), ((int)(((byte)(105)))));
+            this.lblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblCustomer.Location = new System.Drawing.Point(660, 22);
             this.lblCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomer.Name = "lblCustomer";
@@ -299,7 +310,10 @@ namespace POS_204_oracle.uc
             this.cboCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.cboCustomer.Name = "cboCustomer";
             this.cboCustomer.Size = new System.Drawing.Size(187, 30);
+            this.cboCustomer.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboCustomer.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.cboCustomer.StateCommon.ComboBox.Border.Rounding = 6F;
+            this.cboCustomer.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cboCustomer.TabIndex = 7;
             // 
             // btnPrint
@@ -311,11 +325,11 @@ namespace POS_204_oracle.uc
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(127, 44);
-            this.btnPrint.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
-            this.btnPrint.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.btnPrint.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnPrint.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnPrint.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnPrint.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.btnPrint.StateCommon.Border.Rounding = 6F;
-            this.btnPrint.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.btnPrint.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.btnPrint.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnPrint.TabIndex = 10;
             this.btnPrint.Values.DropDownArrowColor = System.Drawing.Color.Empty;
@@ -324,6 +338,7 @@ namespace POS_204_oracle.uc
             // 
             // pnlKpis
             // 
+            this.pnlKpis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.pnlKpis.Controls.Add(this.cardKpi1);
             this.pnlKpis.Controls.Add(this.cardKpi2);
             this.pnlKpis.Controls.Add(this.cardKpi3);
@@ -337,11 +352,11 @@ namespace POS_204_oracle.uc
             // 
             // cardKpi1
             // 
-            this.cardKpi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardKpi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardKpi1.Controls.Add(this.lblKpi1Title);
             this.cardKpi1.Controls.Add(this.lblKpi1Val);
             this.cardKpi1.Depth = 0;
-            this.cardKpi1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardKpi1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardKpi1.Location = new System.Drawing.Point(19, 7);
             this.cardKpi1.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardKpi1.MouseState = MaterialSkin.MouseState.HOVER;
@@ -366,7 +381,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi1Val.AutoSize = true;
             this.lblKpi1Val.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblKpi1Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblKpi1Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblKpi1Val.Location = new System.Drawing.Point(16, 44);
             this.lblKpi1Val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi1Val.Name = "lblKpi1Val";
@@ -376,11 +391,11 @@ namespace POS_204_oracle.uc
             // 
             // cardKpi2
             // 
-            this.cardKpi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardKpi2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardKpi2.Controls.Add(this.lblKpi2Title);
             this.cardKpi2.Controls.Add(this.lblKpi2Val);
             this.cardKpi2.Depth = 0;
-            this.cardKpi2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardKpi2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardKpi2.Location = new System.Drawing.Point(407, 7);
             this.cardKpi2.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardKpi2.MouseState = MaterialSkin.MouseState.HOVER;
@@ -393,7 +408,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi2Title.AutoSize = true;
             this.lblKpi2Title.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblKpi2Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.lblKpi2Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
             this.lblKpi2Title.Location = new System.Drawing.Point(19, 15);
             this.lblKpi2Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi2Title.Name = "lblKpi2Title";
@@ -405,7 +420,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi2Val.AutoSize = true;
             this.lblKpi2Val.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblKpi2Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblKpi2Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblKpi2Val.Location = new System.Drawing.Point(16, 44);
             this.lblKpi2Val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi2Val.Name = "lblKpi2Val";
@@ -415,11 +430,11 @@ namespace POS_204_oracle.uc
             // 
             // cardKpi3
             // 
-            this.cardKpi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardKpi3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardKpi3.Controls.Add(this.lblKpi3Title);
             this.cardKpi3.Controls.Add(this.lblKpi3Val);
             this.cardKpi3.Depth = 0;
-            this.cardKpi3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardKpi3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardKpi3.Location = new System.Drawing.Point(793, 7);
             this.cardKpi3.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardKpi3.MouseState = MaterialSkin.MouseState.HOVER;
@@ -432,7 +447,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi3Title.AutoSize = true;
             this.lblKpi3Title.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblKpi3Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
+            this.lblKpi3Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
             this.lblKpi3Title.Location = new System.Drawing.Point(19, 15);
             this.lblKpi3Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi3Title.Name = "lblKpi3Title";
@@ -444,7 +459,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi3Val.AutoSize = true;
             this.lblKpi3Val.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblKpi3Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblKpi3Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblKpi3Val.Location = new System.Drawing.Point(16, 44);
             this.lblKpi3Val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi3Val.Name = "lblKpi3Val";
@@ -454,11 +469,11 @@ namespace POS_204_oracle.uc
             // 
             // cardKpi4
             // 
-            this.cardKpi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardKpi4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardKpi4.Controls.Add(this.lblKpi4Title);
             this.cardKpi4.Controls.Add(this.lblKpi4Val);
             this.cardKpi4.Depth = 0;
-            this.cardKpi4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardKpi4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardKpi4.Location = new System.Drawing.Point(1180, 7);
             this.cardKpi4.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardKpi4.MouseState = MaterialSkin.MouseState.HOVER;
@@ -471,7 +486,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi4Title.AutoSize = true;
             this.lblKpi4Title.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblKpi4Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(51)))), ((int)(((byte)(234)))));
+            this.lblKpi4Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(85)))), ((int)(((byte)(247)))));
             this.lblKpi4Title.Location = new System.Drawing.Point(19, 15);
             this.lblKpi4Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi4Title.Name = "lblKpi4Title";
@@ -483,7 +498,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblKpi4Val.AutoSize = true;
             this.lblKpi4Val.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.lblKpi4Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblKpi4Val.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblKpi4Val.Location = new System.Drawing.Point(16, 44);
             this.lblKpi4Val.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKpi4Val.Name = "lblKpi4Val";
@@ -493,6 +508,7 @@ namespace POS_204_oracle.uc
             // 
             // pnlGrid
             // 
+            this.pnlGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.pnlGrid.Controls.Add(this.cardGrid);
             this.pnlGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlGrid.Location = new System.Drawing.Point(0, 306);
@@ -506,11 +522,11 @@ namespace POS_204_oracle.uc
             this.cardGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cardGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardGrid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.cardGrid.Controls.Add(this.lblGridTitle);
             this.cardGrid.Controls.Add(this.dgReport);
             this.cardGrid.Depth = 0;
-            this.cardGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cardGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cardGrid.Location = new System.Drawing.Point(19, 7);
             this.cardGrid.Margin = new System.Windows.Forms.Padding(19, 17, 19, 17);
             this.cardGrid.MouseState = MaterialSkin.MouseState.HOVER;
@@ -523,7 +539,7 @@ namespace POS_204_oracle.uc
             // 
             this.lblGridTitle.AutoSize = true;
             this.lblGridTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblGridTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblGridTitle.Location = new System.Drawing.Point(19, 15);
             this.lblGridTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGridTitle.Name = "lblGridTitle";
@@ -537,6 +553,8 @@ namespace POS_204_oracle.uc
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.dgReport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
             this.dgReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgReport.Location = new System.Drawing.Point(19, 49);
             this.dgReport.Margin = new System.Windows.Forms.Padding(4);
@@ -549,7 +567,7 @@ namespace POS_204_oracle.uc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(249)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.Controls.Add(this.pnlGrid);
             this.Controls.Add(this.pnlKpis);
             this.Controls.Add(this.pnlFilters);
