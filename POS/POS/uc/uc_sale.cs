@@ -18,6 +18,7 @@ namespace POS_204_oracle.uc
         private int lastSavedSaleId = 0;
         private int editingSaleId = 0;
         private bool isCalculating = false;
+        private bool isUserPaidEdited = false;
 
         public uc_sale()
         {
@@ -76,7 +77,10 @@ namespace POS_204_oracle.uc
             txtItemNotes.Clear();
             numDiscount.Value = 0;
             dgCart.Rows.Clear();
-            btnSaveSale.Text = "Pay // Save";
+            btnSaveSale.Text = "💳 Pay & Complete";
+            if (cboPayMethod != null && cboPayMethod.Items.Count > 0) cboPayMethod.SelectedIndex = 0;
+            isUserPaidEdited = false;
+            if (txtPaidAmount != null) txtPaidAmount.Text = "0.00";
             AutoSum();
         }
 
@@ -507,11 +511,95 @@ namespace POS_204_oracle.uc
                 lblTotalItemsVal.Text = totalItems.ToString("N0");
                 lblSubTotalVal.Text = $"${subTotal:N2}";
                 lblGrandTotalVal.Text = $"${grandTotal:N2}";
+
+                if (txtPaidAmount != null)
+                {
+                    if (!isUserPaidEdited || string.IsNullOrWhiteSpace(txtPaidAmount.Text) || txtPaidAmount.Text == "0.00" || txtPaidAmount.Text == "0")
+                    {
+                        txtPaidAmount.Text = grandTotal.ToString("0.00");
+                    }
+                    RecalculateSalePayment();
+                }
             }
             finally
             {
                 isCalculating = false;
             }
+        }
+
+        private decimal GetCurrentGrandTotal()
+        {
+            decimal subTotal = 0;
+            foreach (DataGridViewRow row in dgCart.Rows)
+            {
+                if (row.Cells["colCartQty"].Value != null && row.Cells["colCartPrice"].Value != null)
+                {
+                    decimal qty = 0;
+                    decimal.TryParse(row.Cells["colCartQty"].Value.ToString(), out qty);
+                    string priceStr = row.Cells["colCartPrice"].Value.ToString().Replace("$", "").Trim();
+                    decimal price = 0;
+                    decimal.TryParse(priceStr, out price);
+                    subTotal += (qty * price);
+                }
+            }
+            decimal discount = numDiscount.Value;
+            if (discount > subTotal) discount = subTotal;
+            return Math.Max(0, subTotal - discount);
+        }
+
+        private void RecalculateSalePayment()
+        {
+            if (lblChangeVal == null || txtPaidAmount == null || pnlChangeCard == null) return;
+
+            decimal grandTotal = GetCurrentGrandTotal();
+            string text = txtPaidAmount.Text.Trim().Replace("$", "");
+            decimal paid = 0;
+            decimal.TryParse(text, System.Globalization.NumberStyles.Number, System.Globalization.CultureInfo.InvariantCulture, out paid);
+
+            decimal change = paid - grandTotal;
+            decimal khr = change * 4100m;
+
+            if (change >= 0)
+            {
+                lblChangeTitle.Text = "CHANGE DUE";
+                lblChangeTitle.ForeColor = Color.FromArgb(148, 163, 184);
+                lblChangeVal.Text = $"+ ${change:N2} ({khr:N0} ៛)";
+                lblChangeVal.ForeColor = Color.FromArgb(16, 185, 129); // Emerald
+                pnlChangeCard.BackColor = Color.FromArgb(20, 28, 45);
+            }
+            else
+            {
+                lblChangeTitle.Text = "UNDERPAID / DUE";
+                lblChangeTitle.ForeColor = Color.FromArgb(248, 113, 113);
+                lblChangeVal.Text = $"- ${Math.Abs(change):N2} ({(Math.Abs(change) * 4100m):N0} ៛)";
+                lblChangeVal.ForeColor = Color.FromArgb(239, 68, 68); // Red
+                pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
+            }
+        }
+
+        private void txtPaidAmount_TextChanged(object sender, EventArgs e)
+        {
+            if (!isCalculating)
+            {
+                isUserPaidEdited = true;
+            }
+            RecalculateSalePayment();
+        }
+
+        private void txtPaidAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar)) return;
+            if (char.IsDigit(e.KeyChar)) return;
+            if (e.KeyChar == '.' && !txtPaidAmount.Text.Contains(".")) return;
+            e.Handled = true;
+        }
+
+        private void btnExactPay_Click(object sender, EventArgs e)
+        {
+            decimal grandTotal = GetCurrentGrandTotal();
+            txtPaidAmount.Text = grandTotal.ToString("0.00");
+            isUserPaidEdited = false;
+            RecalculateSalePayment();
         }
 
         private void btnAddToList_Click(object sender, EventArgs e)
@@ -690,22 +778,34 @@ namespace POS_204_oracle.uc
                 if (discount > subTotal) discount = subTotal;
                 decimal grandTotal = Math.Max(0, subTotal - discount);
 
-                // Open dedicated POS Payment Dialog
-                decimal paidAmount = grandTotal;
-                string paymentMethod = "Cash";
-                bool autoPrint = true;
-
-                using (frm_payment payFrm = new frm_payment(grandTotal, 4100m))
+                // Direct in-sale payment without secondary forms
+                string paidText = txtPaidAmount.Text.Trim().Replace("$", "");
+                if (!decimal.TryParse(paidText, System.Globalization.NumberStyles.Number, System.Globalization.CultureInfo.InvariantCulture, out decimal paidAmount) || paidAmount < 0)
                 {
-                    if (payFrm.ShowDialog(this) != DialogResult.OK)
-                    {
-                        return; // Cashier canceled payment
-                    }
-
-                    paidAmount = payFrm.AmountPaid;
-                    paymentMethod = payFrm.PaymentMethod;
-                    autoPrint = payFrm.AutoPrintReceipt;
+                    MessageBox.Show("Please enter a valid payment amount.", "Invalid Payment", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtPaidAmount.Focus();
+                    txtPaidAmount.SelectAll();
+                    return;
                 }
+
+                if (paidAmount < grandTotal)
+                {
+                    decimal shortAmount = grandTotal - paidAmount;
+                    var res = MessageBox.Show(
+                        $"The customer has paid ${paidAmount:N2}, which is ${shortAmount:N2} less than the Grand Total (${grandTotal:N2}).\n\nDo you want to proceed and save this sale?",
+                        "Underpaid Warning",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+                    if (res != DialogResult.Yes)
+                    {
+                        txtPaidAmount.Focus();
+                        txtPaidAmount.SelectAll();
+                        return;
+                    }
+                }
+
+                string paymentMethod = cboPayMethod.SelectedItem != null ? cboPayMethod.SelectedItem.ToString() : "Cash";
 
                 // Append payment method into notes if not cash
                 string fullNotes = notes;
@@ -756,22 +856,17 @@ namespace POS_204_oracle.uc
                 if (savedId > 0)
                 {
                     lastSavedSaleId = savedId;
-                    string actionMsg = editingSaleId > 0 ? $"Sale #{savedId} updated successfully!" : $"Sale #{savedId} completed successfully! Inventory stock has been deducted.";
+                    decimal changeDue = Math.Max(0, paidAmount - grandTotal);
+                    decimal changeKHR = changeDue * 4100m;
 
-                    if (autoPrint)
-                    {
-                        PrintReceipt(savedId);
-                    }
-                    else
-                    {
-                        var askReceipt = MessageBox.Show($"{actionMsg}\n\nDo you want to print the receipt now?", "Sale Saved", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (askReceipt == DialogResult.Yes)
-                        {
-                            PrintReceipt(savedId);
-                        }
-                    }
+                    string actionMsg = editingSaleId > 0
+                        ? $"Sale #{savedId} updated successfully!\n\nPaid: ${paidAmount:N2} via {paymentMethod}\nChange Due: ${changeDue:N2} ({changeKHR:N0} ៛)"
+                        : $"Sale #{savedId} completed successfully!\n\nPaid: ${paidAmount:N2} via {paymentMethod}\nChange Due: ${changeDue:N2} ({changeKHR:N0} ៛)\n\nInventory stock has been deducted.";
+
+                    MessageBox.Show(actionMsg, "Payment & Sale Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Reset form and reload products to show new stock on cards
+                    isUserPaidEdited = false;
                     ResetSaleForm();
                     LoadAndRenderProducts();
                 }

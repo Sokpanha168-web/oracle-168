@@ -70,6 +70,14 @@ namespace POS_204_oracle.uc
             this.flpBottomRight = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClearCart = new System.Windows.Forms.Button();
             this.flpBottomLeft = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblPayMethod = new System.Windows.Forms.Label();
+            this.cboPayMethod = new System.Windows.Forms.ComboBox();
+            this.lblPaid = new System.Windows.Forms.Label();
+            this.txtPaidAmount = new System.Windows.Forms.TextBox();
+            this.btnExactPay = new System.Windows.Forms.Button();
+            this.pnlChangeCard = new System.Windows.Forms.Panel();
+            this.lblChangeTitle = new System.Windows.Forms.Label();
+            this.lblChangeVal = new System.Windows.Forms.Label();
             this.btnSaveSale = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
@@ -142,6 +150,7 @@ namespace POS_204_oracle.uc
             this.pnlBottomActions.SuspendLayout();
             this.flpBottomRight.SuspendLayout();
             this.flpBottomLeft.SuspendLayout();
+            this.pnlChangeCard.SuspendLayout();
             this.pnlMain.SuspendLayout();
             this.pnlHistoryView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgHistory)).BeginInit();
@@ -280,15 +289,133 @@ namespace POS_204_oracle.uc
             // flpBottomLeft
             // 
             this.flpBottomLeft.AutoSize = true;
+            this.flpBottomLeft.Controls.Add(this.lblPayMethod);
+            this.flpBottomLeft.Controls.Add(this.cboPayMethod);
+            this.flpBottomLeft.Controls.Add(this.lblPaid);
+            this.flpBottomLeft.Controls.Add(this.txtPaidAmount);
+            this.flpBottomLeft.Controls.Add(this.btnExactPay);
+            this.flpBottomLeft.Controls.Add(this.pnlChangeCard);
             this.flpBottomLeft.Controls.Add(this.btnSaveSale);
-            this.flpBottomLeft.Controls.Add(this.btnPrint);
             this.flpBottomLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpBottomLeft.Location = new System.Drawing.Point(16, 7);
             this.flpBottomLeft.Margin = new System.Windows.Forms.Padding(4);
             this.flpBottomLeft.Name = "flpBottomLeft";
-            this.flpBottomLeft.Size = new System.Drawing.Size(325, 50);
+            this.flpBottomLeft.Size = new System.Drawing.Size(950, 50);
             this.flpBottomLeft.TabIndex = 0;
             this.flpBottomLeft.WrapContents = false;
+            // 
+            // lblPayMethod
+            // 
+            this.lblPayMethod.AutoSize = true;
+            this.lblPayMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPayMethod.Location = new System.Drawing.Point(0, 13);
+            this.lblPayMethod.Margin = new System.Windows.Forms.Padding(0, 13, 4, 0);
+            this.lblPayMethod.Name = "lblPayMethod";
+            this.lblPayMethod.Size = new System.Drawing.Size(67, 20);
+            this.lblPayMethod.TabIndex = 0;
+            this.lblPayMethod.Text = "Method:";
+            // 
+            // cboPayMethod
+            // 
+            this.cboPayMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboPayMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPayMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPayMethod.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.cboPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboPayMethod.FormattingEnabled = true;
+            this.cboPayMethod.Items.AddRange(new object[] {
+            "Cash",
+            "KHQR / ABA",
+            "Wing",
+            "Card"});
+            this.cboPayMethod.Location = new System.Drawing.Point(73, 7);
+            this.cboPayMethod.Margin = new System.Windows.Forms.Padding(2, 7, 12, 0);
+            this.cboPayMethod.Name = "cboPayMethod";
+            this.cboPayMethod.Size = new System.Drawing.Size(130, 29);
+            this.cboPayMethod.TabIndex = 1;
+            // 
+            // lblPaid
+            // 
+            this.lblPaid.AutoSize = true;
+            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPaid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPaid.Location = new System.Drawing.Point(217, 13);
+            this.lblPaid.Margin = new System.Windows.Forms.Padding(2, 13, 4, 0);
+            this.lblPaid.Name = "lblPaid";
+            this.lblPaid.Size = new System.Drawing.Size(65, 20);
+            this.lblPaid.TabIndex = 2;
+            this.lblPaid.Text = "Paid ($):";
+            // 
+            // txtPaidAmount
+            // 
+            this.txtPaidAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtPaidAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPaidAmount.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold);
+            this.txtPaidAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.txtPaidAmount.Location = new System.Drawing.Point(288, 6);
+            this.txtPaidAmount.Margin = new System.Windows.Forms.Padding(2, 6, 6, 0);
+            this.txtPaidAmount.Name = "txtPaidAmount";
+            this.txtPaidAmount.Size = new System.Drawing.Size(110, 33);
+            this.txtPaidAmount.TabIndex = 3;
+            this.txtPaidAmount.Text = "0.00";
+            this.txtPaidAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPaidAmount.TextChanged += new System.EventHandler(this.txtPaidAmount_TextChanged);
+            this.txtPaidAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaidAmount_KeyPress);
+            // 
+            // btnExactPay
+            // 
+            this.btnExactPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnExactPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExactPay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.btnExactPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExactPay.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.btnExactPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.btnExactPay.Location = new System.Drawing.Point(406, 5);
+            this.btnExactPay.Margin = new System.Windows.Forms.Padding(2, 5, 12, 0);
+            this.btnExactPay.Name = "btnExactPay";
+            this.btnExactPay.Size = new System.Drawing.Size(65, 36);
+            this.btnExactPay.TabIndex = 4;
+            this.btnExactPay.Text = "Exact";
+            this.btnExactPay.UseVisualStyleBackColor = false;
+            this.btnExactPay.Click += new System.EventHandler(this.btnExactPay_Click);
+            // 
+            // pnlChangeCard
+            // 
+            this.pnlChangeCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.pnlChangeCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlChangeCard.Controls.Add(this.lblChangeVal);
+            this.pnlChangeCard.Controls.Add(this.lblChangeTitle);
+            this.pnlChangeCard.Location = new System.Drawing.Point(485, 4);
+            this.pnlChangeCard.Margin = new System.Windows.Forms.Padding(2, 4, 14, 0);
+            this.pnlChangeCard.Name = "pnlChangeCard";
+            this.pnlChangeCard.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pnlChangeCard.Size = new System.Drawing.Size(220, 39);
+            this.pnlChangeCard.TabIndex = 5;
+            // 
+            // lblChangeTitle
+            // 
+            this.lblChangeTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblChangeTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.lblChangeTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblChangeTitle.Location = new System.Drawing.Point(4, 2);
+            this.lblChangeTitle.Name = "lblChangeTitle";
+            this.lblChangeTitle.Size = new System.Drawing.Size(210, 14);
+            this.lblChangeTitle.TabIndex = 0;
+            this.lblChangeTitle.Text = "CHANGE DUE";
+            this.lblChangeTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblChangeVal
+            // 
+            this.lblChangeVal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblChangeVal.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblChangeVal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblChangeVal.Location = new System.Drawing.Point(4, 16);
+            this.lblChangeVal.Name = "lblChangeVal";
+            this.lblChangeVal.Size = new System.Drawing.Size(210, 19);
+            this.lblChangeVal.TabIndex = 1;
+            this.lblChangeVal.Text = "$0.00 (0 ៛)";
+            this.lblChangeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSaveSale
             // 
@@ -296,34 +423,17 @@ namespace POS_204_oracle.uc
             this.btnSaveSale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveSale.FlatAppearance.BorderSize = 0;
             this.btnSaveSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSale.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnSaveSale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnSaveSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
-            this.btnSaveSale.Location = new System.Drawing.Point(0, 4);
-            this.btnSaveSale.Margin = new System.Windows.Forms.Padding(0, 4, 10, 4);
+            this.btnSaveSale.Location = new System.Drawing.Point(721, 3);
+            this.btnSaveSale.Margin = new System.Windows.Forms.Padding(2, 3, 10, 0);
             this.btnSaveSale.Name = "btnSaveSale";
-            this.btnSaveSale.Size = new System.Drawing.Size(175, 42);
-            this.btnSaveSale.TabIndex = 0;
-            this.btnSaveSale.Text = "Pay // Save";
+            this.btnSaveSale.Size = new System.Drawing.Size(190, 41);
+            this.btnSaveSale.TabIndex = 6;
+            this.btnSaveSale.Text = "💳 Pay & Complete";
             this.btnSaveSale.UseMnemonic = false;
             this.btnSaveSale.UseVisualStyleBackColor = false;
             this.btnSaveSale.Click += new System.EventHandler(this.btnSaveSale_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPrint.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.btnPrint.Location = new System.Drawing.Point(185, 4);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(0, 4, 10, 4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(130, 42);
-            this.btnPrint.TabIndex = 1;
-            this.btnPrint.Text = "Print Receipt";
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // pnlMain
             // 
@@ -1292,6 +1402,7 @@ namespace POS_204_oracle.uc
             this.pnlBottomActions.PerformLayout();
             this.flpBottomRight.ResumeLayout(false);
             this.flpBottomLeft.ResumeLayout(false);
+            this.pnlChangeCard.ResumeLayout(false);
             this.pnlMain.ResumeLayout(false);
             this.pnlHistoryView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgHistory)).EndInit();
@@ -1341,8 +1452,15 @@ namespace POS_204_oracle.uc
 
         private System.Windows.Forms.FlowLayoutPanel flpBottomLeft;
 
+        private System.Windows.Forms.Label lblPayMethod;
+        private System.Windows.Forms.ComboBox cboPayMethod;
+        private System.Windows.Forms.Label lblPaid;
+        private System.Windows.Forms.TextBox txtPaidAmount;
+        private System.Windows.Forms.Button btnExactPay;
+        private System.Windows.Forms.Panel pnlChangeCard;
+        private System.Windows.Forms.Label lblChangeTitle;
+        private System.Windows.Forms.Label lblChangeVal;
         private System.Windows.Forms.Button btnSaveSale;
-
         private System.Windows.Forms.Button btnPrint;
 
         private System.Windows.Forms.FlowLayoutPanel flpBottomRight;

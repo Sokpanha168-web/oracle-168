@@ -52,7 +52,7 @@ namespace POS_204_oracle
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(493, 44);
+            this.pnlHeader.Size = new System.Drawing.Size(478, 44);
             this.pnlHeader.TabIndex = 0;
             this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlHeader_MouseDown);
             this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlHeader_MouseMove);
@@ -66,7 +66,7 @@ namespace POS_204_oracle
             this.lblHeaderTitle.Location = new System.Drawing.Point(16, 12);
             this.lblHeaderTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeaderTitle.Name = "lblHeaderTitle";
-            this.lblHeaderTitle.Size = new System.Drawing.Size(240, 20);
+            this.lblHeaderTitle.Size = new System.Drawing.Size(265, 20);
             this.lblHeaderTitle.TabIndex = 0;
             this.lblHeaderTitle.Text = "⚡ POS SYSTEM - TERMINAL LOGIN";
             // 
@@ -79,7 +79,7 @@ namespace POS_204_oracle
             this.btnTopClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTopClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopClose.ForeColor = System.Drawing.Color.White;
-            this.btnTopClose.Location = new System.Drawing.Point(445, 5);
+            this.btnTopClose.Location = new System.Drawing.Point(430, 5);
             this.btnTopClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnTopClose.Name = "btnTopClose";
             this.btnTopClose.Size = new System.Drawing.Size(40, 34);
@@ -122,7 +122,6 @@ namespace POS_204_oracle
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(393, 31);
             this.txtusername.TabIndex = 4;
-            this.txtusername.Text = "TSOKPANHA";
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyUp);
             // 
@@ -162,7 +161,6 @@ namespace POS_204_oracle
             this.txtpassword.PasswordChar = '•';
             this.txtpassword.Size = new System.Drawing.Size(393, 31);
             this.txtpassword.TabIndex = 7;
-            this.txtpassword.Text = "123";
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             this.txtpassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyUp);
             // 
@@ -218,7 +216,7 @@ namespace POS_204_oracle
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
-            this.ClientSize = new System.Drawing.Size(493, 397);
+            this.ClientSize = new System.Drawing.Size(478, 404);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.lbl2);
