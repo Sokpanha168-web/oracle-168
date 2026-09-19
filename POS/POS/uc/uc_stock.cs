@@ -55,7 +55,7 @@ namespace POS_204_oracle.uc
         {
             UITheme.ApplyGridTheme(dg);
             dg.BorderStyle = BorderStyle.None;
-            dg.BackgroundColor = Color.FromArgb(10, 14, 23);
+            dg.BackgroundColor = Color.FromArgb(240, 244, 249);
             dg.AllowUserToAddRows = false;
             dg.AllowUserToDeleteRows = false;
             dg.AllowUserToResizeRows = false;
@@ -64,19 +64,19 @@ namespace POS_204_oracle.uc
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dg.MultiSelect = false;
             dg.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dg.GridColor = Color.FromArgb(38, 52, 80);
+            dg.GridColor = Color.FromArgb(226, 232, 240);
             dg.RowTemplate.Height = 40;
-            dg.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(15, 23, 42);
-            dg.DefaultCellStyle.BackColor = Color.FromArgb(20, 28, 45);
-            dg.DefaultCellStyle.ForeColor = Color.FromArgb(248, 250, 252);
-            dg.DefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 41, 59);
-            dg.DefaultCellStyle.SelectionForeColor = Color.FromArgb(16, 185, 129);
+            dg.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(239, 246, 255);
+            dg.DefaultCellStyle.BackColor = Color.White;
+            dg.DefaultCellStyle.ForeColor = Color.FromArgb(15, 23, 42);
+            dg.DefaultCellStyle.SelectionBackColor = Color.FromArgb(219, 234, 254);
+            dg.DefaultCellStyle.SelectionForeColor = Color.FromArgb(30, 58, 138);
             dg.DefaultCellStyle.Font = new Font("Segoe UI", 9.25F);
 
             dg.EnableHeadersVisualStyles = false;
             dg.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dg.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(10, 14, 23);
-            dg.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(248, 250, 252);
+            dg.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(239, 246, 255);
+            dg.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(30, 58, 138);
             dg.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             dg.ColumnHeadersDefaultCellStyle.Padding = new Padding(6, 4, 6, 4);
             dg.ColumnHeadersHeight = 40;
@@ -265,18 +265,18 @@ namespace POS_204_oracle.uc
                 string status = e.Value.ToString();
                 if (status == "In Stock")
                 {
-                    e.CellStyle.ForeColor = Color.FromArgb(16, 185, 129); // Emerald bold green
-                    e.CellStyle.BackColor = Color.FromArgb(10, 40, 30); // Dark emerald bg
-                    e.CellStyle.SelectionForeColor = Color.FromArgb(16, 185, 129);
-                    e.CellStyle.SelectionBackColor = Color.FromArgb(15, 55, 40);
+                    e.CellStyle.ForeColor = Color.FromArgb(37, 99, 235); // Royal blue
+                    e.CellStyle.BackColor = Color.FromArgb(239, 246, 255); // Ice blue
+                    e.CellStyle.SelectionForeColor = Color.FromArgb(30, 58, 138);
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(219, 234, 254);
                     e.CellStyle.Font = new Font(dgInventory.Font, FontStyle.Bold);
                 }
                 else if (status == "Out of Stock")
                 {
-                    e.CellStyle.ForeColor = Color.FromArgb(239, 68, 68); // Crimson bold red
-                    e.CellStyle.BackColor = Color.FromArgb(50, 15, 20); // Dark crimson bg
-                    e.CellStyle.SelectionForeColor = Color.FromArgb(239, 68, 68);
-                    e.CellStyle.SelectionBackColor = Color.FromArgb(70, 20, 25);
+                    e.CellStyle.ForeColor = Color.FromArgb(220, 38, 38); // Red
+                    e.CellStyle.BackColor = Color.FromArgb(254, 242, 242); // Soft light red
+                    e.CellStyle.SelectionForeColor = Color.FromArgb(185, 28, 28);
+                    e.CellStyle.SelectionBackColor = Color.FromArgb(254, 226, 226);
                     e.CellStyle.Font = new Font(dgInventory.Font, FontStyle.Bold);
                 }
             }
@@ -291,12 +291,12 @@ namespace POS_204_oracle.uc
 
                     if (stockVal <= 0)
                     {
-                        e.CellStyle.ForeColor = Color.FromArgb(239, 68, 68);
+                        e.CellStyle.ForeColor = Color.FromArgb(220, 38, 38);
                         e.CellStyle.Font = new Font(dgInventory.Font, FontStyle.Bold);
                     }
                     else
                     {
-                        e.CellStyle.ForeColor = Color.FromArgb(248, 250, 252);
+                        e.CellStyle.ForeColor = Color.FromArgb(15, 23, 42);
                         e.CellStyle.Font = new Font(dgInventory.Font, FontStyle.Bold);
                     }
                 }

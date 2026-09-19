@@ -49,14 +49,14 @@ namespace POS_204_oracle
             {
                 if (btn == activeButton)
                 {
-                    btn.BackColor = Color.FromArgb(16, 185, 129); // Emerald active
-                    btn.ForeColor = Color.FromArgb(10, 14, 23); // Dark text on bright emerald
+                    btn.BackColor = Color.White; // Clean white active pill
+                    btn.ForeColor = Color.FromArgb(29, 78, 216); // Royal Blue text
                     btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
                 }
                 else
                 {
-                    btn.BackColor = Color.FromArgb(13, 18, 30);
-                    btn.ForeColor = Color.FromArgb(148, 163, 184);
+                    btn.BackColor = Color.FromArgb(30, 58, 138); // Deep Royal Blue
+                    btn.ForeColor = Color.FromArgb(219, 234, 254); // Ice Blue text
                     btn.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
                 }
             }

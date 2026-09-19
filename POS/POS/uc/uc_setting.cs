@@ -167,7 +167,7 @@ namespace POS_204_oracle.uc
                 {
                     logoChanged = false;
                     lblSaveStatus.Text = "✓ Settings & company branding saved successfully!";
-                    lblSaveStatus.ForeColor = Color.FromArgb(16, 185, 129);
+                    lblSaveStatus.ForeColor = Color.FromArgb(37, 99, 235);
                     MessageBox.Show("Company settings, logo, and receipt branding updated successfully!\nThe main header and receipts will now use your new branding.", "Saved Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

@@ -8,43 +8,43 @@ namespace POS_204_oracle
     public static class UITheme
     {
         // ==========================================
-        // NEXT-GEN OBSIDIAN EMERALD PALETTE
+        // MODERN WHITE & BLUE CORPORATE PALETTE
         // ==========================================
-        public static readonly Color BgDark          = Color.FromArgb(10, 14, 23);      // #0A0E17 (Deep Void)
-        public static readonly Color BgSidebar       = Color.FromArgb(13, 18, 30);      // #0D121E (Sidebar)
-        public static readonly Color BgHeader        = Color.FromArgb(15, 22, 36);      // #0F1624 (Top Header)
-        public static readonly Color CardBg          = Color.FromArgb(20, 28, 45);      // #141C2D (Card Surface)
-        public static readonly Color CardBgAlt       = Color.FromArgb(24, 34, 54);      // #182236 (Hover / Elevated)
-        public static readonly Color CardBorder      = Color.FromArgb(38, 52, 80);      // #263450 (Border Outline)
+        public static readonly Color BgDark          = Color.FromArgb(240, 244, 249);   // #F0F4F9 (Crisp Soft White Canvas)
+        public static readonly Color BgSidebar       = Color.FromArgb(30, 58, 138);     // #1E3A8A (Deep Royal Blue Sidebar)
+        public static readonly Color BgHeader        = Color.FromArgb(29, 78, 216);     // #1D4ED8 (Vibrant Royal Blue Header)
+        public static readonly Color CardBg          = Color.FromArgb(255, 255, 255);   // #FFFFFF (Pure White Surface)
+        public static readonly Color CardBgAlt       = Color.FromArgb(239, 246, 255);   // #EFF6FF (Ice Blue Hover/Alt)
+        public static readonly Color CardBorder      = Color.FromArgb(191, 219, 254);   // #BFDBFE (Soft Blue Border)
 
         // Accent Colors
-        public static readonly Color Primary         = Color.FromArgb(16, 185, 129);    // #10B981 (Emerald Green)
-        public static readonly Color PrimaryHover    = Color.FromArgb(52, 211, 153);    // #34D399 (Mint Glow)
-        public static readonly Color Secondary       = Color.FromArgb(6, 182, 212);     // #06B6D4 (Cyber Cyan)
-        public static readonly Color AccentViolet    = Color.FromArgb(139, 92, 246);    // #8B5CF6 (Neon Violet)
-        public static readonly Color Warning         = Color.FromArgb(245, 158, 11);    // #F59E0B (Amber Gold)
-        public static readonly Color Danger          = Color.FromArgb(239, 68, 68);     // #EF4444 (Crimson Red)
+        public static readonly Color Primary         = Color.FromArgb(37, 99, 235);     // #2563EB (Royal Blue)
+        public static readonly Color PrimaryHover    = Color.FromArgb(29, 78, 216);     // #1D4ED8 (Deep Blue Hover)
+        public static readonly Color Secondary       = Color.FromArgb(59, 130, 246);    // #3B82F6 (Sky Blue)
+        public static readonly Color AccentViolet    = Color.FromArgb(99, 102, 241);    // #6366F1 (Indigo Blue)
+        public static readonly Color Warning         = Color.FromArgb(217, 119, 6);     // #D97706 (Amber)
+        public static readonly Color Danger          = Color.FromArgb(239, 68, 68);     // #EF4444 (Crimson)
         public static readonly Color DangerHover     = Color.FromArgb(220, 38, 38);
 
         // Typography Colors
-        public static readonly Color TextWhite       = Color.FromArgb(248, 250, 252);   // #F8FAFC (Ultra White)
-        public static readonly Color TextMuted       = Color.FromArgb(148, 163, 184);   // #94A3B8 (Cool Slate)
+        public static readonly Color TextWhite       = Color.FromArgb(15, 23, 42);      // #0F172A (Deep Slate for Light Bg)
+        public static readonly Color TextMuted       = Color.FromArgb(71, 85, 105);     // #475569 (Slate Muted)
         public static readonly Color TextDim         = Color.FromArgb(100, 116, 139);   // #64748B (Dim Slate)
 
         // Form Inputs
-        public static readonly Color InputBg         = Color.FromArgb(15, 22, 35);      // #0F1623
-        public static readonly Color InputBorder     = Color.FromArgb(45, 60, 90);
-        public static readonly Color InputFocus      = Color.FromArgb(16, 185, 129);
+        public static readonly Color InputBg         = Color.FromArgb(255, 255, 255);   // #FFFFFF
+        public static readonly Color InputBorder     = Color.FromArgb(191, 219, 254);   // #BFDBFE
+        public static readonly Color InputFocus      = Color.FromArgb(37, 99, 235);     // #2563EB
 
         // Grid
-        public static readonly Color GridHeaderBg    = Color.FromArgb(15, 22, 36);
-        public static readonly Color GridHeaderFg    = Color.FromArgb(248, 250, 252);
-        public static readonly Color GridRowBg       = Color.FromArgb(20, 28, 45);
-        public static readonly Color GridRowAltBg    = Color.FromArgb(16, 23, 38);
-        public static readonly Color GridRowFg       = Color.FromArgb(226, 232, 240);
-        public static readonly Color GridSelectionBg = Color.FromArgb(16, 185, 129);
-        public static readonly Color GridSelectionFg = Color.White;
-        public static readonly Color GridLineColor   = Color.FromArgb(30, 42, 65);
+        public static readonly Color GridHeaderBg    = Color.FromArgb(239, 246, 255);   // #EFF6FF
+        public static readonly Color GridHeaderFg    = Color.FromArgb(30, 58, 138);     // #1E3A8A
+        public static readonly Color GridRowBg       = Color.FromArgb(255, 255, 255);   // #FFFFFF
+        public static readonly Color GridRowAltBg    = Color.FromArgb(248, 250, 252);   // #F8FAFC
+        public static readonly Color GridRowFg       = Color.FromArgb(15, 23, 42);      // #0F172A
+        public static readonly Color GridSelectionBg = Color.FromArgb(219, 234, 254);   // #DBEAFE
+        public static readonly Color GridSelectionFg = Color.FromArgb(30, 58, 138);     // #1E3A8A
+        public static readonly Color GridLineColor   = Color.FromArgb(226, 232, 240);   // #E2E8F0
 
         // Standard Fonts
         public static readonly Font FontTitleLarge   = new Font("Segoe UI", 16F, FontStyle.Bold);

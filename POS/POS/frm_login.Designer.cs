@@ -45,7 +45,7 @@ namespace POS_204_oracle
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.pnlHeader.Controls.Add(this.lblHeaderTitle);
             this.pnlHeader.Controls.Add(this.btnTopClose);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,7 +62,7 @@ namespace POS_204_oracle
             // 
             this.lblHeaderTitle.AutoSize = true;
             this.lblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblHeaderTitle.ForeColor = System.Drawing.Color.White;
             this.lblHeaderTitle.Location = new System.Drawing.Point(16, 12);
             this.lblHeaderTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHeaderTitle.Name = "lblHeaderTitle";
@@ -92,7 +92,7 @@ namespace POS_204_oracle
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.label1.Location = new System.Drawing.Point(47, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -103,7 +103,7 @@ namespace POS_204_oracle
             // 
             this.lblUserHeader.AutoSize = true;
             this.lblUserHeader.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblUserHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.lblUserHeader.Location = new System.Drawing.Point(45, 73);
             this.lblUserHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserHeader.Name = "lblUserHeader";
@@ -113,10 +113,10 @@ namespace POS_204_oracle
             // 
             // txtusername
             // 
-            this.txtusername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(35)))));
+            this.txtusername.BackColor = System.Drawing.Color.White;
             this.txtusername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusername.ForeColor = System.Drawing.Color.White;
+            this.txtusername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtusername.Location = new System.Drawing.Point(45, 97);
             this.txtusername.Margin = new System.Windows.Forms.Padding(4);
             this.txtusername.Name = "txtusername";
@@ -141,7 +141,7 @@ namespace POS_204_oracle
             // 
             this.lblPassHeader.AutoSize = true;
             this.lblPassHeader.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPassHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.lblPassHeader.Location = new System.Drawing.Point(45, 161);
             this.lblPassHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassHeader.Name = "lblPassHeader";
@@ -151,10 +151,10 @@ namespace POS_204_oracle
             // 
             // txtpassword
             // 
-            this.txtpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(22)))), ((int)(((byte)(35)))));
+            this.txtpassword.BackColor = System.Drawing.Color.White;
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.ForeColor = System.Drawing.Color.White;
+            this.txtpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.txtpassword.Location = new System.Drawing.Point(45, 186);
             this.txtpassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtpassword.Name = "txtpassword";
@@ -178,7 +178,7 @@ namespace POS_204_oracle
             // 
             // btnlogin
             // 
-            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogin.FlatAppearance.BorderSize = 0;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -195,12 +195,12 @@ namespace POS_204_oracle
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(254)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnClose.Location = new System.Drawing.Point(45, 316);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
@@ -215,7 +215,7 @@ namespace POS_204_oracle
             this.AcceptButton = this.btnlogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(478, 404);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnlogin);

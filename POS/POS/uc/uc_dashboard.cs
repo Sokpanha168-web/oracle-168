@@ -114,7 +114,7 @@ namespace POS_204_oracle.uc
                 dgTopProds.Columns["Revenue ($)"].Width = 85;
                 dgTopProds.Columns["Revenue ($)"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dgTopProds.Columns["Revenue ($)"].DefaultCellStyle.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold);
-                dgTopProds.Columns["Revenue ($)"].DefaultCellStyle.ForeColor = Color.FromArgb(16, 185, 129);
+                dgTopProds.Columns["Revenue ($)"].DefaultCellStyle.ForeColor = Color.FromArgb(37, 99, 235);
             }
         }
 

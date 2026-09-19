@@ -52,36 +52,36 @@ namespace POS_204_oracle
 
                 if (ChangeDue >= 0)
                 {
-                    pnlChangeCard.BackColor = Color.FromArgb(18, 36, 32);
+                    pnlChangeCard.BackColor = Color.FromArgb(239, 246, 255);
                     lblChangeCaption.Text = "CHANGE DUE TO CUSTOMER";
-                    lblChangeCaption.ForeColor = UITheme.PrimaryHover;
+                    lblChangeCaption.ForeColor = Color.FromArgb(30, 58, 138);
                     lblChangeVal.Text = "+ $" + ChangeDue.ToString("N2");
-                    lblChangeVal.ForeColor = UITheme.PrimaryHover;
+                    lblChangeVal.ForeColor = Color.FromArgb(37, 99, 235);
                     lblChangeKHR.Text = $"KHR ~ {(ChangeDue * _exchangeRate):N0} ៛";
-                    lblChangeKHR.ForeColor = UITheme.Primary;
+                    lblChangeKHR.ForeColor = Color.FromArgb(30, 58, 138);
                 }
                 else
                 {
-                    pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
+                    pnlChangeCard.BackColor = Color.FromArgb(254, 242, 242);
                     lblChangeCaption.Text = "AMOUNT STILL DUE (UNDERPAID)";
-                    lblChangeCaption.ForeColor = Color.FromArgb(248, 113, 113);
+                    lblChangeCaption.ForeColor = Color.FromArgb(220, 38, 38);
                     lblChangeVal.Text = "- $" + Math.Abs(ChangeDue).ToString("N2");
-                    lblChangeVal.ForeColor = Color.FromArgb(248, 113, 113);
+                    lblChangeVal.ForeColor = Color.FromArgb(220, 38, 38);
                     lblChangeKHR.Text = $"Short: {(Math.Abs(ChangeDue) * _exchangeRate):N0} ៛";
-                    lblChangeKHR.ForeColor = Color.FromArgb(248, 113, 113);
+                    lblChangeKHR.ForeColor = Color.FromArgb(220, 38, 38);
                 }
             }
             else
             {
                 AmountPaid = 0m;
                 ChangeDue = -_grandTotal;
-                pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
+                pnlChangeCard.BackColor = Color.FromArgb(254, 242, 242);
                 lblChangeCaption.Text = "INVALID AMOUNT ENTERED";
-                lblChangeCaption.ForeColor = Color.FromArgb(248, 113, 113);
+                lblChangeCaption.ForeColor = Color.FromArgb(220, 38, 38);
                 lblChangeVal.Text = "$0.00";
-                lblChangeVal.ForeColor = Color.FromArgb(248, 113, 113);
+                lblChangeVal.ForeColor = Color.FromArgb(220, 38, 38);
                 lblChangeKHR.Text = "Enter numbers only";
-                lblChangeKHR.ForeColor = Color.FromArgb(248, 113, 113);
+                lblChangeKHR.ForeColor = Color.FromArgb(220, 38, 38);
             }
 
             pnlChangeCard.Invalidate();
@@ -163,7 +163,7 @@ namespace POS_204_oracle
 
         private void pnlDueCard_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen p = new Pen(Color.FromArgb(59, 130, 246), 1.5f))
+            using (Pen p = new Pen(Color.FromArgb(191, 219, 254), 1.5f))
             {
                 p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
                 e.Graphics.DrawRectangle(p, 0, 0, pnlDueCard.Width - 1, pnlDueCard.Height - 1);
@@ -172,7 +172,7 @@ namespace POS_204_oracle
 
         private void pnlCashReceived_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen p = new Pen(Color.FromArgb(148, 163, 184), 1.5f))
+            using (Pen p = new Pen(Color.FromArgb(191, 219, 254), 1.5f))
             {
                 p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
                 e.Graphics.DrawRectangle(p, 0, 0, pnlCashReceived.Width - 1, pnlCashReceived.Height - 1);
@@ -181,7 +181,7 @@ namespace POS_204_oracle
 
         private void pnlChangeCard_Paint(object sender, PaintEventArgs e)
         {
-            Color borderColor = ChangeDue >= 0 ? Color.FromArgb(16, 185, 129) : Color.FromArgb(239, 68, 68);
+            Color borderColor = ChangeDue >= 0 ? Color.FromArgb(191, 219, 254) : Color.FromArgb(252, 165, 165);
             using (Pen p = new Pen(borderColor, 1.5f))
             {
                 p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -191,9 +191,9 @@ namespace POS_204_oracle
 
         private void pnlBottom_Paint(object sender, PaintEventArgs e)
         {
-            using (Pen p = new Pen(Color.FromArgb(148, 163, 184), 1.5f))
+            using (Pen p = new Pen(Color.FromArgb(226, 232, 240), 1.5f))
             {
-                p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+                p.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
                 e.Graphics.DrawLine(p, 0, 0, pnlBottom.Width, 0);
             }
         }

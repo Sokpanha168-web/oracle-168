@@ -66,7 +66,7 @@ namespace POS_204_oracle
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.panelTop.Controls.Add(this.lblBreadcrumb);
             this.panelTop.Controls.Add(this.lblStatusPill);
             this.panelTop.Controls.Add(this.lblClock);
@@ -85,7 +85,7 @@ namespace POS_204_oracle
             // 
             this.lblBreadcrumb.AutoSize = true;
             this.lblBreadcrumb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblBreadcrumb.Location = new System.Drawing.Point(295, 25);
             this.lblBreadcrumb.Name = "lblBreadcrumb";
             this.lblBreadcrumb.Size = new System.Drawing.Size(185, 20);
@@ -94,9 +94,9 @@ namespace POS_204_oracle
             // 
             // lblStatusPill
             // 
-            this.lblStatusPill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(40)))), ((int)(((byte)(35)))));
+            this.lblStatusPill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.lblStatusPill.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusPill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(211)))), ((int)(((byte)(153)))));
+            this.lblStatusPill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblStatusPill.Location = new System.Drawing.Point(520, 20);
             this.lblStatusPill.Name = "lblStatusPill";
             this.lblStatusPill.Size = new System.Drawing.Size(135, 28);
@@ -108,7 +108,7 @@ namespace POS_204_oracle
             // 
             this.lblClock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblClock.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.lblClock.Location = new System.Drawing.Point(660, 22);
             this.lblClock.Name = "lblClock";
             this.lblClock.Size = new System.Drawing.Size(320, 26);
@@ -129,7 +129,7 @@ namespace POS_204_oracle
             // 
             // lblBrandBadge
             // 
-            this.lblBrandBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblBrandBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.lblBrandBadge.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrandBadge.ForeColor = System.Drawing.Color.White;
             this.lblBrandBadge.Location = new System.Drawing.Point(19, 15);
@@ -144,7 +144,7 @@ namespace POS_204_oracle
             // 
             this.lblAppTitle.AutoSize = true;
             this.lblAppTitle.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblAppTitle.ForeColor = System.Drawing.Color.White;
             this.lblAppTitle.Location = new System.Drawing.Point(77, 18);
             this.lblAppTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAppTitle.Name = "lblAppTitle";
@@ -181,7 +181,7 @@ namespace POS_204_oracle
             // 
             this.lbluser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbluser.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lbluser.ForeColor = System.Drawing.Color.White;
             this.lbluser.Location = new System.Drawing.Point(133, 12);
             this.lbluser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbluser.Name = "lbluser";
@@ -192,12 +192,12 @@ namespace POS_204_oracle
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(213)))), ((int)(((byte)(225)))));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(467, 7);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
@@ -210,7 +210,7 @@ namespace POS_204_oracle
             // 
             // panelNav
             // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.panelNav.Controls.Add(this.btnExit);
             this.panelNav.Controls.Add(this.btnSetting);
             this.panelNav.Controls.Add(this.btnUser);
@@ -235,13 +235,13 @@ namespace POS_204_oracle
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(78)))), ((int)(((byte)(216)))));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(165)))), ((int)(((byte)(250)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(12, 737);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
@@ -253,14 +253,14 @@ namespace POS_204_oracle
             // 
             // btnSetting
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnSetting.Location = new System.Drawing.Point(12, 470);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnSetting.Name = "btnSetting";
@@ -275,14 +275,14 @@ namespace POS_204_oracle
             // 
             // btnUser
             // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnUser.Location = new System.Drawing.Point(12, 426);
             this.btnUser.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnUser.Name = "btnUser";
@@ -297,14 +297,14 @@ namespace POS_204_oracle
             // 
             // btnReport
             // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnReport.Location = new System.Drawing.Point(12, 382);
             this.btnReport.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnReport.Name = "btnReport";
@@ -321,7 +321,7 @@ namespace POS_204_oracle
             // 
             this.lblNavSystem.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNavSystem.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(197)))), ((int)(((byte)(253)))));
             this.lblNavSystem.Location = new System.Drawing.Point(12, 354);
             this.lblNavSystem.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavSystem.Name = "lblNavSystem";
@@ -333,14 +333,14 @@ namespace POS_204_oracle
             // 
             // btnSuppler
             // 
-            this.btnSuppler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnSuppler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnSuppler.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuppler.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSuppler.FlatAppearance.BorderSize = 0;
-            this.btnSuppler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnSuppler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnSuppler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuppler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuppler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnSuppler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnSuppler.Location = new System.Drawing.Point(12, 310);
             this.btnSuppler.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnSuppler.Name = "btnSuppler";
@@ -355,14 +355,14 @@ namespace POS_204_oracle
             // 
             // btnCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCategory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCategory.FlatAppearance.BorderSize = 0;
-            this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnCategory.Location = new System.Drawing.Point(12, 266);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnCategory.Name = "btnCategory";
@@ -377,14 +377,14 @@ namespace POS_204_oracle
             // 
             // btnStock
             // 
-            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnStock.Location = new System.Drawing.Point(12, 222);
             this.btnStock.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnStock.Name = "btnStock";
@@ -399,14 +399,14 @@ namespace POS_204_oracle
             // 
             // btnProduct
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduct.FlatAppearance.BorderSize = 0;
-            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnProduct.Location = new System.Drawing.Point(12, 178);
             this.btnProduct.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnProduct.Name = "btnProduct";
@@ -423,7 +423,7 @@ namespace POS_204_oracle
             // 
             this.lblNavInventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNavInventory.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(197)))), ((int)(((byte)(253)))));
             this.lblNavInventory.Location = new System.Drawing.Point(12, 150);
             this.lblNavInventory.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavInventory.Name = "lblNavInventory";
@@ -435,14 +435,14 @@ namespace POS_204_oracle
             // 
             // btnCustomer
             // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnCustomer.Location = new System.Drawing.Point(12, 106);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnCustomer.Name = "btnCustomer";
@@ -457,14 +457,14 @@ namespace POS_204_oracle
             // 
             // btnSale
             // 
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnSale.Location = new System.Drawing.Point(12, 62);
             this.btnSale.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnSale.Name = "btnSale";
@@ -479,14 +479,14 @@ namespace POS_204_oracle
             // 
             // btnDashboard
             // 
-            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(138)))));
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
             this.btnDashboard.Location = new System.Drawing.Point(12, 38);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnDashboard.Name = "btnDashboard";
@@ -503,7 +503,7 @@ namespace POS_204_oracle
             // 
             this.lblNavSales.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblNavSales.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(197)))), ((int)(((byte)(253)))));
             this.lblNavSales.Location = new System.Drawing.Point(12, 10);
             this.lblNavSales.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavSales.Name = "lblNavSales";
@@ -541,7 +541,7 @@ namespace POS_204_oracle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1600, 862);
             this.Controls.Add(this.MainTab);
             this.Controls.Add(this.panelNav);

@@ -125,8 +125,8 @@ namespace POS_204_oracle.uc
                     Tag = 0,
                     Size = new Size(65, 28),
                     FlatStyle = FlatStyle.Flat,
-                    BackColor = Color.FromArgb(16, 185, 129), // Emerald
-                    ForeColor = Color.FromArgb(10, 14, 23),
+                    BackColor = Color.FromArgb(37, 99, 235), // Royal Blue active
+                    ForeColor = Color.White,
                     Font = new Font("Segoe UI", 9F, FontStyle.Bold),
                     Cursor = Cursors.Hand,
                     Margin = new Padding(3, 2, 3, 2)
@@ -149,8 +149,8 @@ namespace POS_204_oracle.uc
                         Height = 28,
                         MinimumSize = new Size(70, 28),
                         FlatStyle = FlatStyle.Flat,
-                        BackColor = Color.FromArgb(24, 34, 54),
-                        ForeColor = Color.FromArgb(148, 163, 184),
+                        BackColor = Color.White,
+                        ForeColor = Color.FromArgb(30, 58, 138),
                         Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
                         Cursor = Cursors.Hand,
                         Margin = new Padding(3, 2, 3, 2)
@@ -179,13 +179,13 @@ namespace POS_204_oracle.uc
                 {
                     if (b == btn)
                     {
-                        b.BackColor = Color.FromArgb(16, 185, 129);
-                        b.ForeColor = Color.FromArgb(10, 14, 23);
+                        b.BackColor = Color.FromArgb(37, 99, 235);
+                        b.ForeColor = Color.White;
                     }
                     else
                     {
-                        b.BackColor = Color.FromArgb(24, 34, 54);
-                        b.ForeColor = Color.FromArgb(148, 163, 184);
+                        b.BackColor = Color.White;
+                        b.ForeColor = Color.FromArgb(30, 58, 138);
                     }
                 }
             }
@@ -240,7 +240,7 @@ namespace POS_204_oracle.uc
                     Text = "No products found in this category.",
                     AutoSize = true,
                     Font = new Font("Segoe UI", 10F, FontStyle.Italic),
-                    ForeColor = Color.FromArgb(148, 163, 184),
+                    ForeColor = Color.FromArgb(71, 85, 105),
                     Padding = new Padding(16)
                 };
                 flpProducts.Controls.Add(lblEmpty);
@@ -259,7 +259,7 @@ namespace POS_204_oracle.uc
                 {
                     Width = 142,
                     Height = 175,
-                    BackColor = Color.FromArgb(20, 28, 45),
+                    BackColor = Color.White,
                     Margin = new Padding(6),
                     Cursor = Cursors.Hand,
                     Tag = prodId
@@ -268,7 +268,7 @@ namespace POS_204_oracle.uc
                 bool isHovered = false;
                 card.Paint += (s, pe) =>
                 {
-                    Color borderColor = isHovered ? Color.FromArgb(16, 185, 129) : Color.FromArgb(38, 52, 80);
+                    Color borderColor = isHovered ? Color.FromArgb(37, 99, 235) : Color.FromArgb(191, 219, 254);
                     using (Pen pen = new Pen(borderColor, isHovered ? 2 : 1))
                     {
                         pe.Graphics.DrawRectangle(pen, 0, 0, card.Width - 1, card.Height - 1);
@@ -281,7 +281,7 @@ namespace POS_204_oracle.uc
                     Dock = DockStyle.Top,
                     Height = 90,
                     SizeMode = PictureBoxSizeMode.Zoom,
-                    BackColor = Color.FromArgb(10, 14, 23),
+                    BackColor = Color.FromArgb(248, 250, 252),
                     Tag = prodId
                 };
 
@@ -317,7 +317,7 @@ namespace POS_204_oracle.uc
                     Height = 32,
                     Text = prodName,
                     Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
-                    ForeColor = Color.FromArgb(248, 250, 252),
+                    ForeColor = Color.FromArgb(15, 23, 42),
                     TextAlign = ContentAlignment.MiddleCenter,
                     AutoEllipsis = true,
                     Tag = prodId
@@ -330,7 +330,7 @@ namespace POS_204_oracle.uc
                     Height = 18,
                     Text = stock <= 0 ? "● Out of Stock" : $"● {stock:N0} in stock",
                     Font = new Font("Segoe UI", 7.5F, stock <= 0 ? FontStyle.Bold : FontStyle.Regular),
-                    ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(16, 185, 129),
+                    ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(37, 99, 235),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };
@@ -342,7 +342,7 @@ namespace POS_204_oracle.uc
                     Height = 28,
                     Text = $"${price:N2}",
                     Font = new Font("Segoe UI", 10F, FontStyle.Bold),
-                    ForeColor = Color.FromArgb(16, 185, 129),
+                    ForeColor = Color.FromArgb(29, 78, 216),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };
@@ -356,14 +356,14 @@ namespace POS_204_oracle.uc
                 EventHandler onEnter = (s, pe) =>
                 {
                     isHovered = true;
-                    card.BackColor = Color.FromArgb(26, 36, 58);
+                    card.BackColor = Color.FromArgb(239, 246, 255);
                     card.Invalidate();
                 };
 
                 EventHandler onLeave = (s, pe) =>
                 {
                     isHovered = false;
-                    card.BackColor = Color.FromArgb(20, 28, 45);
+                    card.BackColor = Color.White;
                     card.Invalidate();
                 };
 
@@ -422,7 +422,7 @@ namespace POS_204_oracle.uc
             txtSelectedProd.Text = prodName;
             txtSellPrice.Text = $"${price:N2}";
             lblAvailStockVal.Text = $"{stock:N0} units";
-            lblAvailStockVal.ForeColor = stock <= 0 ? Color.FromArgb(220, 38, 38) : Color.FromArgb(16, 185, 129);
+            lblAvailStockVal.ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(37, 99, 235);
             numQtyOut.Maximum = Math.Max(1, stock);
             numQtyOut.Value = 1;
 
@@ -507,7 +507,7 @@ namespace POS_204_oracle.uc
             dgCart.Rows[rowIndex].Cells["colCartAction"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             dgCart.Rows[rowIndex].Cells["colCartQtyMinus"].Style.ForeColor = Color.FromArgb(239, 68, 68);
             dgCart.Rows[rowIndex].Cells["colCartQtyMinus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dgCart.Rows[rowIndex].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(16, 185, 129);
+            dgCart.Rows[rowIndex].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(37, 99, 235);
             dgCart.Rows[rowIndex].Cells["colCartQtyPlus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
 
             AutoSum();
@@ -610,18 +610,18 @@ namespace POS_204_oracle.uc
             if (change >= 0)
             {
                 lblChangeTitle.Text = "CHANGE DUE";
-                lblChangeTitle.ForeColor = Color.FromArgb(148, 163, 184);
+                lblChangeTitle.ForeColor = Color.FromArgb(71, 85, 105);
                 lblChangeVal.Text = $"+ ${change:N2} ({khr:N0} ៛)";
-                lblChangeVal.ForeColor = Color.FromArgb(16, 185, 129); // Emerald
-                pnlChangeCard.BackColor = Color.FromArgb(20, 28, 45);
+                lblChangeVal.ForeColor = Color.FromArgb(29, 78, 216);
+                pnlChangeCard.BackColor = Color.FromArgb(239, 246, 255);
             }
             else
             {
                 lblChangeTitle.Text = "UNDERPAID / DUE";
-                lblChangeTitle.ForeColor = Color.FromArgb(248, 113, 113);
+                lblChangeTitle.ForeColor = Color.FromArgb(220, 38, 38);
                 lblChangeVal.Text = $"- ${Math.Abs(change):N2} ({(Math.Abs(change) * 4100m):N0} ៛)";
-                lblChangeVal.ForeColor = Color.FromArgb(239, 68, 68); // Red
-                pnlChangeCard.BackColor = Color.FromArgb(36, 18, 24);
+                lblChangeVal.ForeColor = Color.FromArgb(239, 68, 68);
+                pnlChangeCard.BackColor = Color.FromArgb(254, 242, 242);
             }
         }
 
@@ -1087,7 +1087,7 @@ namespace POS_204_oracle.uc
                     dgHistory.Columns["paid"].DefaultCellStyle.Format = "C2";
                     dgHistory.Columns["paid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                     dgHistory.Columns["paid"].DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-                    dgHistory.Columns["paid"].DefaultCellStyle.ForeColor = Color.FromArgb(5, 150, 105);
+                    dgHistory.Columns["paid"].DefaultCellStyle.ForeColor = Color.FromArgb(37, 99, 235);
                     dgHistory.Columns["paid"].Visible = true;
                 }
                 if (dgHistory.Columns.Contains("exchange_rate")) dgHistory.Columns["exchange_rate"].Visible = false;
@@ -1151,7 +1151,7 @@ namespace POS_204_oracle.uc
                     dgCart.Rows[idx].Cells["colCartAction"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
                     dgCart.Rows[idx].Cells["colCartQtyMinus"].Style.ForeColor = Color.FromArgb(239, 68, 68);
                     dgCart.Rows[idx].Cells["colCartQtyMinus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-                    dgCart.Rows[idx].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(16, 185, 129);
+                    dgCart.Rows[idx].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(37, 99, 235);
                     dgCart.Rows[idx].Cells["colCartQtyPlus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
                 }
 
