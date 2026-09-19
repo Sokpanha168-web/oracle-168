@@ -28,7 +28,11 @@ namespace POS_204_oracle
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.lblBreadcrumb = new System.Windows.Forms.Label();
+            this.lblStatusPill = new System.Windows.Forms.Label();
+            this.lblClock = new System.Windows.Forms.Label();
             this.picBrandLogo = new System.Windows.Forms.PictureBox();
             this.lblBrandBadge = new System.Windows.Forms.Label();
             this.lblAppTitle = new System.Windows.Forms.Label();
@@ -38,17 +42,20 @@ namespace POS_204_oracle
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelNav = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lblNavSystem = new System.Windows.Forms.Label();
             this.btnSetting = new System.Windows.Forms.Button();
+            this.btnUser = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
-            this.btnSale = new System.Windows.Forms.Button();
-            this.btnCustomer = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.btnProduct = new System.Windows.Forms.Button();
+            this.lblNavInventory = new System.Windows.Forms.Label();
             this.btnSuppler = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
+            this.lblNavSales = new System.Windows.Forms.Label();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnSale = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.lblNavSection = new System.Windows.Forms.Label();
+            this.timerClock = new System.Windows.Forms.Timer(this.components);
             this.MainTab = new System.Windows.Forms.TabControl();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBrandLogo)).BeginInit();
@@ -60,6 +67,9 @@ namespace POS_204_oracle
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.panelTop.Controls.Add(this.lblBreadcrumb);
+            this.panelTop.Controls.Add(this.lblStatusPill);
+            this.panelTop.Controls.Add(this.lblClock);
             this.panelTop.Controls.Add(this.picBrandLogo);
             this.panelTop.Controls.Add(this.lblBrandBadge);
             this.panelTop.Controls.Add(this.lblAppTitle);
@@ -70,6 +80,41 @@ namespace POS_204_oracle
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1600, 69);
             this.panelTop.TabIndex = 0;
+            // 
+            // lblBreadcrumb
+            // 
+            this.lblBreadcrumb.AutoSize = true;
+            this.lblBreadcrumb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblBreadcrumb.Location = new System.Drawing.Point(295, 25);
+            this.lblBreadcrumb.Name = "lblBreadcrumb";
+            this.lblBreadcrumb.Size = new System.Drawing.Size(185, 20);
+            this.lblBreadcrumb.TabIndex = 5;
+            this.lblBreadcrumb.Text = "SYSTEM  ›  DASHBOARD";
+            // 
+            // lblStatusPill
+            // 
+            this.lblStatusPill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(40)))), ((int)(((byte)(35)))));
+            this.lblStatusPill.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusPill.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(211)))), ((int)(((byte)(153)))));
+            this.lblStatusPill.Location = new System.Drawing.Point(520, 20);
+            this.lblStatusPill.Name = "lblStatusPill";
+            this.lblStatusPill.Size = new System.Drawing.Size(135, 28);
+            this.lblStatusPill.TabIndex = 6;
+            this.lblStatusPill.Text = "● SYSTEM ONLINE";
+            this.lblStatusPill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblClock
+            // 
+            this.lblClock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblClock.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblClock.Location = new System.Drawing.Point(660, 22);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(320, 26);
+            this.lblClock.TabIndex = 7;
+            this.lblClock.Text = "--:--:-- --";
+            this.lblClock.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // picBrandLogo
             // 
@@ -162,26 +207,29 @@ namespace POS_204_oracle
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // 
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.panelNav.Controls.Add(this.btnExit);
             this.panelNav.Controls.Add(this.btnSetting);
+            this.panelNav.Controls.Add(this.btnUser);
             this.panelNav.Controls.Add(this.btnReport);
-            this.panelNav.Controls.Add(this.btnSale);
-            this.panelNav.Controls.Add(this.btnCustomer);
-            this.panelNav.Controls.Add(this.btnStock);
-            this.panelNav.Controls.Add(this.btnProduct);
+            this.panelNav.Controls.Add(this.lblNavSystem);
             this.panelNav.Controls.Add(this.btnSuppler);
             this.panelNav.Controls.Add(this.btnCategory);
-            this.panelNav.Controls.Add(this.btnUser);
+            this.panelNav.Controls.Add(this.btnStock);
+            this.panelNav.Controls.Add(this.btnProduct);
+            this.panelNav.Controls.Add(this.lblNavInventory);
+            this.panelNav.Controls.Add(this.btnCustomer);
+            this.panelNav.Controls.Add(this.btnSale);
             this.panelNav.Controls.Add(this.btnDashboard);
-            this.panelNav.Controls.Add(this.lblNavSection);
+            this.panelNav.Controls.Add(this.lblNavSales);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNav.Location = new System.Drawing.Point(0, 69);
             this.panelNav.Margin = new System.Windows.Forms.Padding(4);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Padding = new System.Windows.Forms.Padding(13, 15, 13, 15);
+            this.panelNav.Padding = new System.Windows.Forms.Padding(12, 10, 12, 12);
             this.panelNav.Size = new System.Drawing.Size(293, 793);
             this.panelNav.TabIndex = 1;
             // 
@@ -194,10 +242,10 @@ namespace POS_204_oracle
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.btnExit.Location = new System.Drawing.Point(13, 726);
+            this.btnExit.Location = new System.Drawing.Point(12, 737);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(267, 52);
+            this.btnExit.Size = new System.Drawing.Size(269, 44);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "⏻  Exit System";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -211,19 +259,41 @@ namespace POS_204_oracle
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnSetting.Location = new System.Drawing.Point(13, 528);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnSetting.Location = new System.Drawing.Point(12, 470);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSetting.Size = new System.Drawing.Size(267, 54);
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnSetting.Size = new System.Drawing.Size(269, 44);
             this.btnSetting.TabIndex = 8;
             this.btnSetting.Tag = "SETTINGS";
             this.btnSetting.Text = "⚙️  Company & Settings";
             this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnUser.Location = new System.Drawing.Point(12, 426);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(269, 44);
+            this.btnUser.TabIndex = 1;
+            this.btnUser.Tag = "USER";
+            this.btnUser.Text = "👤  Users Management";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btnReport
             // 
@@ -233,13 +303,13 @@ namespace POS_204_oracle
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnReport.Location = new System.Drawing.Point(13, 474);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnReport.Location = new System.Drawing.Point(12, 382);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnReport.Size = new System.Drawing.Size(267, 54);
+            this.btnReport.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnReport.Size = new System.Drawing.Size(269, 44);
             this.btnReport.TabIndex = 7;
             this.btnReport.Tag = "REPORTS";
             this.btnReport.Text = "📈  Reports & Analytics";
@@ -247,93 +317,19 @@ namespace POS_204_oracle
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
-            // btnSale
+            // lblNavSystem
             // 
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnSale.Location = new System.Drawing.Point(13, 420);
-            this.btnSale.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSale.Size = new System.Drawing.Size(267, 54);
-            this.btnSale.TabIndex = 6;
-            this.btnSale.Tag = "SALES";
-            this.btnSale.Text = "🛒  Sales & POS";
-            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomer.FlatAppearance.BorderSize = 0;
-            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnCustomer.Location = new System.Drawing.Point(13, 366);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(267, 54);
-            this.btnCustomer.TabIndex = 5;
-            this.btnCustomer.Tag = "CUSTOMER";
-            this.btnCustomer.Text = "👥  Customers";
-            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
-            // 
-            // btnStock
-            // 
-            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnStock.Location = new System.Drawing.Point(13, 312);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnStock.Size = new System.Drawing.Size(267, 54);
-            this.btnStock.TabIndex = 4;
-            this.btnStock.Tag = "STOCK";
-            this.btnStock.Text = "📊  Stock & Inventory";
-            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStock.UseVisualStyleBackColor = false;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.btnProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProduct.FlatAppearance.BorderSize = 0;
-            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnProduct.Location = new System.Drawing.Point(13, 258);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnProduct.Size = new System.Drawing.Size(267, 54);
-            this.btnProduct.TabIndex = 4;
-            this.btnProduct.Tag = "PRODUCT";
-            this.btnProduct.Text = "📦  Products Catalog";
-            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.UseVisualStyleBackColor = false;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            this.lblNavSystem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNavSystem.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavSystem.Location = new System.Drawing.Point(12, 354);
+            this.lblNavSystem.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNavSystem.Name = "lblNavSystem";
+            this.lblNavSystem.Padding = new System.Windows.Forms.Padding(6, 6, 0, 4);
+            this.lblNavSystem.Size = new System.Drawing.Size(269, 28);
+            this.lblNavSystem.TabIndex = 10;
+            this.lblNavSystem.Text = "MANAGEMENT & SYSTEM";
+            this.lblNavSystem.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btnSuppler
             // 
@@ -343,13 +339,13 @@ namespace POS_204_oracle
             this.btnSuppler.FlatAppearance.BorderSize = 0;
             this.btnSuppler.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.btnSuppler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuppler.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppler.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuppler.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnSuppler.Location = new System.Drawing.Point(13, 204);
-            this.btnSuppler.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnSuppler.Location = new System.Drawing.Point(12, 310);
+            this.btnSuppler.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnSuppler.Name = "btnSuppler";
-            this.btnSuppler.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnSuppler.Size = new System.Drawing.Size(267, 54);
+            this.btnSuppler.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnSuppler.Size = new System.Drawing.Size(269, 44);
             this.btnSuppler.TabIndex = 3;
             this.btnSuppler.Tag = "SUPPLIER";
             this.btnSuppler.Text = "🏢  Suppliers";
@@ -365,13 +361,13 @@ namespace POS_204_oracle
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnCategory.Location = new System.Drawing.Point(13, 150);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnCategory.Location = new System.Drawing.Point(12, 266);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnCategory.Size = new System.Drawing.Size(267, 54);
+            this.btnCategory.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnCategory.Size = new System.Drawing.Size(269, 44);
             this.btnCategory.TabIndex = 2;
             this.btnCategory.Tag = "CATEGORY";
             this.btnCategory.Text = "📑  Categories";
@@ -379,27 +375,107 @@ namespace POS_204_oracle
             this.btnCategory.UseVisualStyleBackColor = false;
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
-            // btnUser
+            // btnStock
             // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUser.FlatAppearance.BorderSize = 0;
-            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnUser.Location = new System.Drawing.Point(13, 96);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnUser.Size = new System.Drawing.Size(267, 54);
-            this.btnUser.TabIndex = 1;
-            this.btnUser.Tag = "USER";
-            this.btnUser.Text = "👤  Users Management";
-            this.btnUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUser.UseVisualStyleBackColor = false;
-            this.btnUser.Click += new System.EventHandler(this.btn1_Click);
+            this.btnStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnStock.Location = new System.Drawing.Point(12, 222);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnStock.Size = new System.Drawing.Size(269, 44);
+            this.btnStock.TabIndex = 4;
+            this.btnStock.Tag = "STOCK";
+            this.btnStock.Text = "📊  Stock & Inventory";
+            this.btnStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProduct.FlatAppearance.BorderSize = 0;
+            this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnProduct.Location = new System.Drawing.Point(12, 178);
+            this.btnProduct.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnProduct.Size = new System.Drawing.Size(269, 44);
+            this.btnProduct.TabIndex = 4;
+            this.btnProduct.Tag = "PRODUCT";
+            this.btnProduct.Text = "📦  Products Catalog";
+            this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // lblNavInventory
+            // 
+            this.lblNavInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNavInventory.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavInventory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavInventory.Location = new System.Drawing.Point(12, 150);
+            this.lblNavInventory.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNavInventory.Name = "lblNavInventory";
+            this.lblNavInventory.Padding = new System.Windows.Forms.Padding(6, 6, 0, 4);
+            this.lblNavInventory.Size = new System.Drawing.Size(269, 28);
+            this.lblNavInventory.TabIndex = 9;
+            this.lblNavInventory.Text = "INVENTORY & CATALOG";
+            this.lblNavInventory.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnCustomer.Location = new System.Drawing.Point(12, 106);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(269, 44);
+            this.btnCustomer.TabIndex = 5;
+            this.btnCustomer.Tag = "CUSTOMER";
+            this.btnCustomer.Text = "👥  Customers";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // btnSale
+            // 
+            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
+            this.btnSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSale.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSale.FlatAppearance.BorderSize = 0;
+            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.btnSale.Location = new System.Drawing.Point(12, 62);
+            this.btnSale.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.btnSale.Name = "btnSale";
+            this.btnSale.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnSale.Size = new System.Drawing.Size(269, 44);
+            this.btnSale.TabIndex = 6;
+            this.btnSale.Tag = "SALES";
+            this.btnSale.Text = "🛒  Sales & POS";
+            this.btnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSale.UseVisualStyleBackColor = false;
+            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // btnDashboard
             // 
@@ -409,13 +485,13 @@ namespace POS_204_oracle
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.btnDashboard.Location = new System.Drawing.Point(13, 42);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(12, 38);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(267, 54);
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(269, 44);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Tag = "DASHBOARD";
             this.btnDashboard.Text = "📊  Dashboard";
@@ -423,19 +499,26 @@ namespace POS_204_oracle
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // lblNavSection
+            // lblNavSales
             // 
-            this.lblNavSection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblNavSection.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavSection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.lblNavSection.Location = new System.Drawing.Point(13, 15);
-            this.lblNavSection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNavSection.Name = "lblNavSection";
-            this.lblNavSection.Padding = new System.Windows.Forms.Padding(5, 0, 0, 5);
-            this.lblNavSection.Size = new System.Drawing.Size(267, 27);
-            this.lblNavSection.TabIndex = 0;
-            this.lblNavSection.Text = "MAIN NAVIGATION";
-            this.lblNavSection.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblNavSales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblNavSales.Font = new System.Drawing.Font("Segoe UI", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.lblNavSales.Location = new System.Drawing.Point(12, 10);
+            this.lblNavSales.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNavSales.Name = "lblNavSales";
+            this.lblNavSales.Padding = new System.Windows.Forms.Padding(6, 0, 0, 4);
+            this.lblNavSales.Size = new System.Drawing.Size(269, 28);
+            this.lblNavSales.TabIndex = 0;
+            this.lblNavSales.Text = "TERMINAL & SALES";
+            this.lblNavSales.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // 
+            // timerClock
+            // 
+            this.timerClock.Enabled = true;
+            this.timerClock.Interval = 1000;
+            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
             // MainTab
             // 
@@ -485,12 +568,17 @@ namespace POS_204_oracle
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label lblBrandBadge;
         private System.Windows.Forms.Label lblAppTitle;
+        private System.Windows.Forms.Label lblBreadcrumb;
+        private System.Windows.Forms.Label lblStatusPill;
+        private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Panel pnlUserSection;
         private System.Windows.Forms.PictureBox picUserAvatar;
         private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Label lblNavSection;
+        private System.Windows.Forms.Label lblNavSales;
+        private System.Windows.Forms.Label lblNavInventory;
+        private System.Windows.Forms.Label lblNavSystem;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.Button btnSuppler;
@@ -504,5 +592,6 @@ namespace POS_204_oracle
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox picBrandLogo;
         private System.Windows.Forms.TabControl MainTab;
+        private System.Windows.Forms.Timer timerClock;
     }
 }

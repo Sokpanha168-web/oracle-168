@@ -100,10 +100,18 @@ namespace POS_204_oracle.uc
             this.dgCart = new System.Windows.Forms.DataGridView();
             this.colCartProdId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCartProdName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCartQtyMinus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colCartQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCartQtyPlus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colCartPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCartTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCartAction = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.pnlCartHeader = new System.Windows.Forms.Panel();
+            this.lblOrderTitle = new System.Windows.Forms.Label();
+            this.lblOrderBadge = new System.Windows.Forms.Label();
+            this.pnlCheckout = new System.Windows.Forms.Panel();
+            this.pnlCheckoutDivider = new System.Windows.Forms.Panel();
+            this.lblGrandTotalKHR = new System.Windows.Forms.Label();
             this.lblItemsHeader = new System.Windows.Forms.Label();
             this.tlpSummary = new System.Windows.Forms.TableLayoutPanel();
             this.pnlCardGrandTotal = new System.Windows.Forms.Panel();
@@ -159,6 +167,8 @@ namespace POS_204_oracle.uc
             this.flpHistLeft.SuspendLayout();
             this.pnlPOS.SuspendLayout();
             this.pnlRight.SuspendLayout();
+            this.pnlCartHeader.SuspendLayout();
+            this.pnlCheckout.SuspendLayout();
             this.pnlSaleItems.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCart)).BeginInit();
             this.tlpSummary.SuspendLayout();
@@ -242,197 +252,15 @@ namespace POS_204_oracle.uc
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "SALE / STOCK OUT";
             // 
+            // 
             // pnlBottomActions
             // 
-            this.pnlBottomActions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(18)))), ((int)(((byte)(30)))));
-            this.pnlBottomActions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBottomActions.Controls.Add(this.flpBottomRight);
-            this.pnlBottomActions.Controls.Add(this.flpBottomLeft);
             this.pnlBottomActions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottomActions.Location = new System.Drawing.Point(0, 869);
-            this.pnlBottomActions.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBottomActions.Location = new System.Drawing.Point(0, 935);
             this.pnlBottomActions.Name = "pnlBottomActions";
-            this.pnlBottomActions.Padding = new System.Windows.Forms.Padding(16, 7, 16, 7);
-            this.pnlBottomActions.Size = new System.Drawing.Size(1707, 66);
+            this.pnlBottomActions.Size = new System.Drawing.Size(1707, 0);
             this.pnlBottomActions.TabIndex = 2;
-            // 
-            // flpBottomRight
-            // 
-            this.flpBottomRight.AutoSize = true;
-            this.flpBottomRight.Controls.Add(this.btnClearCart);
-            this.flpBottomRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flpBottomRight.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flpBottomRight.Location = new System.Drawing.Point(1517, 7);
-            this.flpBottomRight.Margin = new System.Windows.Forms.Padding(4);
-            this.flpBottomRight.Name = "flpBottomRight";
-            this.flpBottomRight.Size = new System.Drawing.Size(172, 50);
-            this.flpBottomRight.TabIndex = 1;
-            this.flpBottomRight.WrapContents = false;
-            // 
-            // btnClearCart
-            // 
-            this.btnClearCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnClearCart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClearCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.btnClearCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearCart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnClearCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.btnClearCart.Location = new System.Drawing.Point(12, 4);
-            this.btnClearCart.Margin = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.btnClearCart.Name = "btnClearCart";
-            this.btnClearCart.Size = new System.Drawing.Size(160, 42);
-            this.btnClearCart.TabIndex = 0;
-            this.btnClearCart.Text = "Clear Cart";
-            this.btnClearCart.UseVisualStyleBackColor = false;
-            this.btnClearCart.Click += new System.EventHandler(this.btnClearCart_Click);
-            // 
-            // flpBottomLeft
-            // 
-            this.flpBottomLeft.AutoSize = true;
-            this.flpBottomLeft.Controls.Add(this.lblPayMethod);
-            this.flpBottomLeft.Controls.Add(this.cboPayMethod);
-            this.flpBottomLeft.Controls.Add(this.lblPaid);
-            this.flpBottomLeft.Controls.Add(this.txtPaidAmount);
-            this.flpBottomLeft.Controls.Add(this.btnExactPay);
-            this.flpBottomLeft.Controls.Add(this.pnlChangeCard);
-            this.flpBottomLeft.Controls.Add(this.btnSaveSale);
-            this.flpBottomLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpBottomLeft.Location = new System.Drawing.Point(16, 7);
-            this.flpBottomLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.flpBottomLeft.Name = "flpBottomLeft";
-            this.flpBottomLeft.Size = new System.Drawing.Size(950, 50);
-            this.flpBottomLeft.TabIndex = 0;
-            this.flpBottomLeft.WrapContents = false;
-            // 
-            // lblPayMethod
-            // 
-            this.lblPayMethod.AutoSize = true;
-            this.lblPayMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.lblPayMethod.Location = new System.Drawing.Point(0, 13);
-            this.lblPayMethod.Margin = new System.Windows.Forms.Padding(0, 13, 4, 0);
-            this.lblPayMethod.Name = "lblPayMethod";
-            this.lblPayMethod.Size = new System.Drawing.Size(67, 20);
-            this.lblPayMethod.TabIndex = 0;
-            this.lblPayMethod.Text = "Method:";
-            // 
-            // cboPayMethod
-            // 
-            this.cboPayMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.cboPayMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPayMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboPayMethod.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.cboPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.cboPayMethod.FormattingEnabled = true;
-            this.cboPayMethod.Items.AddRange(new object[] {
-            "Cash",
-            "KHQR / ABA",
-            "Wing",
-            "Card"});
-            this.cboPayMethod.Location = new System.Drawing.Point(73, 7);
-            this.cboPayMethod.Margin = new System.Windows.Forms.Padding(2, 7, 12, 0);
-            this.cboPayMethod.Name = "cboPayMethod";
-            this.cboPayMethod.Size = new System.Drawing.Size(130, 29);
-            this.cboPayMethod.TabIndex = 1;
-            // 
-            // lblPaid
-            // 
-            this.lblPaid.AutoSize = true;
-            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lblPaid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.lblPaid.Location = new System.Drawing.Point(217, 13);
-            this.lblPaid.Margin = new System.Windows.Forms.Padding(2, 13, 4, 0);
-            this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(65, 20);
-            this.lblPaid.TabIndex = 2;
-            this.lblPaid.Text = "Paid ($):";
-            // 
-            // txtPaidAmount
-            // 
-            this.txtPaidAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.txtPaidAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPaidAmount.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold);
-            this.txtPaidAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
-            this.txtPaidAmount.Location = new System.Drawing.Point(288, 6);
-            this.txtPaidAmount.Margin = new System.Windows.Forms.Padding(2, 6, 6, 0);
-            this.txtPaidAmount.Name = "txtPaidAmount";
-            this.txtPaidAmount.Size = new System.Drawing.Size(110, 33);
-            this.txtPaidAmount.TabIndex = 3;
-            this.txtPaidAmount.Text = "0.00";
-            this.txtPaidAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPaidAmount.TextChanged += new System.EventHandler(this.txtPaidAmount_TextChanged);
-            this.txtPaidAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaidAmount_KeyPress);
-            // 
-            // btnExactPay
-            // 
-            this.btnExactPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.btnExactPay.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExactPay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
-            this.btnExactPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExactPay.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.btnExactPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
-            this.btnExactPay.Location = new System.Drawing.Point(406, 5);
-            this.btnExactPay.Margin = new System.Windows.Forms.Padding(2, 5, 12, 0);
-            this.btnExactPay.Name = "btnExactPay";
-            this.btnExactPay.Size = new System.Drawing.Size(65, 36);
-            this.btnExactPay.TabIndex = 4;
-            this.btnExactPay.Text = "Exact";
-            this.btnExactPay.UseVisualStyleBackColor = false;
-            this.btnExactPay.Click += new System.EventHandler(this.btnExactPay_Click);
-            // 
-            // pnlChangeCard
-            // 
-            this.pnlChangeCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
-            this.pnlChangeCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlChangeCard.Controls.Add(this.lblChangeVal);
-            this.pnlChangeCard.Controls.Add(this.lblChangeTitle);
-            this.pnlChangeCard.Location = new System.Drawing.Point(485, 4);
-            this.pnlChangeCard.Margin = new System.Windows.Forms.Padding(2, 4, 14, 0);
-            this.pnlChangeCard.Name = "pnlChangeCard";
-            this.pnlChangeCard.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.pnlChangeCard.Size = new System.Drawing.Size(220, 39);
-            this.pnlChangeCard.TabIndex = 5;
-            // 
-            // lblChangeTitle
-            // 
-            this.lblChangeTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblChangeTitle.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.lblChangeTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
-            this.lblChangeTitle.Location = new System.Drawing.Point(4, 2);
-            this.lblChangeTitle.Name = "lblChangeTitle";
-            this.lblChangeTitle.Size = new System.Drawing.Size(210, 14);
-            this.lblChangeTitle.TabIndex = 0;
-            this.lblChangeTitle.Text = "CHANGE DUE";
-            this.lblChangeTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblChangeVal
-            // 
-            this.lblChangeVal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblChangeVal.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.lblChangeVal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
-            this.lblChangeVal.Location = new System.Drawing.Point(4, 16);
-            this.lblChangeVal.Name = "lblChangeVal";
-            this.lblChangeVal.Size = new System.Drawing.Size(210, 19);
-            this.lblChangeVal.TabIndex = 1;
-            this.lblChangeVal.Text = "$0.00 (0 ៛)";
-            this.lblChangeVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSaveSale
-            // 
-            this.btnSaveSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
-            this.btnSaveSale.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveSale.FlatAppearance.BorderSize = 0;
-            this.btnSaveSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSale.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSaveSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
-            this.btnSaveSale.Location = new System.Drawing.Point(721, 3);
-            this.btnSaveSale.Margin = new System.Windows.Forms.Padding(2, 3, 10, 0);
-            this.btnSaveSale.Name = "btnSaveSale";
-            this.btnSaveSale.Size = new System.Drawing.Size(190, 41);
-            this.btnSaveSale.TabIndex = 6;
-            this.btnSaveSale.Text = "💳 Pay & Complete";
-            this.btnSaveSale.UseMnemonic = false;
-            this.btnSaveSale.UseVisualStyleBackColor = false;
+            this.pnlBottomActions.Visible = false;
             this.btnSaveSale.Click += new System.EventHandler(this.btnSaveSale_Click);
             // 
             // pnlMain
@@ -676,28 +504,329 @@ namespace POS_204_oracle.uc
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
             this.pnlRight.Controls.Add(this.pnlSaleItems);
-            this.pnlRight.Controls.Add(this.tlpSummary);
+            this.pnlRight.Controls.Add(this.pnlCheckout);
+            this.pnlRight.Controls.Add(this.pnlCartHeader);
             this.pnlRight.Controls.Add(this.pnlSaleInfo);
+            this.pnlRight.Controls.Add(this.tlpSummary);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRight.Location = new System.Drawing.Point(613, 0);
+            this.pnlRight.Location = new System.Drawing.Point(1000, 0);
             this.pnlRight.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.pnlRight.Size = new System.Drawing.Size(1094, 810);
+            this.pnlRight.Padding = new System.Windows.Forms.Padding(8);
+            this.pnlRight.Size = new System.Drawing.Size(707, 810);
             this.pnlRight.TabIndex = 1;
+            // 
+            // pnlCartHeader
+            // 
+            this.pnlCartHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.pnlCartHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCartHeader.Controls.Add(this.cboCustomer);
+            this.pnlCartHeader.Controls.Add(this.lblCustomer);
+            this.pnlCartHeader.Controls.Add(this.lblOrderBadge);
+            this.pnlCartHeader.Controls.Add(this.lblOrderTitle);
+            this.pnlCartHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCartHeader.Location = new System.Drawing.Point(8, 8);
+            this.pnlCartHeader.Name = "pnlCartHeader";
+            this.pnlCartHeader.Padding = new System.Windows.Forms.Padding(12, 10, 12, 10);
+            this.pnlCartHeader.Size = new System.Drawing.Size(691, 56);
+            this.pnlCartHeader.TabIndex = 0;
+            // 
+            // lblOrderTitle
+            // 
+            this.lblOrderTitle.AutoSize = true;
+            this.lblOrderTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblOrderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblOrderTitle.Location = new System.Drawing.Point(10, 14);
+            this.lblOrderTitle.Name = "lblOrderTitle";
+            this.lblOrderTitle.Size = new System.Drawing.Size(145, 25);
+            this.lblOrderTitle.TabIndex = 0;
+            this.lblOrderTitle.Text = "ORDER ITEMS";
+            // 
+            // lblOrderBadge
+            // 
+            this.lblOrderBadge.AutoSize = true;
+            this.lblOrderBadge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.lblOrderBadge.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblOrderBadge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.lblOrderBadge.Location = new System.Drawing.Point(165, 17);
+            this.lblOrderBadge.Name = "lblOrderBadge";
+            this.lblOrderBadge.Padding = new System.Windows.Forms.Padding(6, 2, 6, 2);
+            this.lblOrderBadge.Size = new System.Drawing.Size(110, 24);
+            this.lblOrderBadge.TabIndex = 1;
+            this.lblOrderBadge.Text = "#SO-1001";
+            // 
+            // lblCustomer
+            // 
+            this.lblCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCustomer.AutoSize = true;
+            this.lblCustomer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblCustomer.Location = new System.Drawing.Point(365, 18);
+            this.lblCustomer.Name = "lblCustomer";
+            this.lblCustomer.Size = new System.Drawing.Size(82, 20);
+            this.lblCustomer.TabIndex = 2;
+            this.lblCustomer.Text = "Customer:";
+            // 
+            // cboCustomer
+            // 
+            this.cboCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboCustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCustomer.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.cboCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboCustomer.FormattingEnabled = true;
+            this.cboCustomer.Location = new System.Drawing.Point(455, 13);
+            this.cboCustomer.Name = "cboCustomer";
+            this.cboCustomer.Size = new System.Drawing.Size(220, 29);
+            this.cboCustomer.TabIndex = 3;
+            // 
+            // pnlCheckout
+            // 
+            this.pnlCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
+            this.pnlCheckout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCheckout.Controls.Add(this.btnSaveSale);
+            this.pnlCheckout.Controls.Add(this.btnClearCart);
+            this.pnlCheckout.Controls.Add(this.lblChangeVal);
+            this.pnlCheckout.Controls.Add(this.btnExactPay);
+            this.pnlCheckout.Controls.Add(this.txtPaidAmount);
+            this.pnlCheckout.Controls.Add(this.lblPaid);
+            this.pnlCheckout.Controls.Add(this.cboPayMethod);
+            this.pnlCheckout.Controls.Add(this.lblPayMethod);
+            this.pnlCheckout.Controls.Add(this.lblGrandTotalKHR);
+            this.pnlCheckout.Controls.Add(this.lblGrandTotalVal);
+            this.pnlCheckout.Controls.Add(this.lblGrandTotalTitle);
+            this.pnlCheckout.Controls.Add(this.pnlCheckoutDivider);
+            this.pnlCheckout.Controls.Add(this.numDiscount);
+            this.pnlCheckout.Controls.Add(this.lblDiscountTitle);
+            this.pnlCheckout.Controls.Add(this.lblSubTotalVal);
+            this.pnlCheckout.Controls.Add(this.lblSubTotalTitle);
+            this.pnlCheckout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlCheckout.Location = new System.Drawing.Point(8, 545);
+            this.pnlCheckout.Name = "pnlCheckout";
+            this.pnlCheckout.Padding = new System.Windows.Forms.Padding(14, 10, 14, 10);
+            this.pnlCheckout.Size = new System.Drawing.Size(691, 257);
+            this.pnlCheckout.TabIndex = 2;
+            // 
+            // lblSubTotalTitle
+            // 
+            this.lblSubTotalTitle.AutoSize = true;
+            this.lblSubTotalTitle.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblSubTotalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblSubTotalTitle.Location = new System.Drawing.Point(14, 10);
+            this.lblSubTotalTitle.Name = "lblSubTotalTitle";
+            this.lblSubTotalTitle.Size = new System.Drawing.Size(71, 21);
+            this.lblSubTotalTitle.TabIndex = 0;
+            this.lblSubTotalTitle.Text = "Subtotal:";
+            // 
+            // lblSubTotalVal
+            // 
+            this.lblSubTotalVal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubTotalVal.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lblSubTotalVal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblSubTotalVal.Location = new System.Drawing.Point(460, 8);
+            this.lblSubTotalVal.Name = "lblSubTotalVal";
+            this.lblSubTotalVal.Size = new System.Drawing.Size(215, 23);
+            this.lblSubTotalVal.TabIndex = 1;
+            this.lblSubTotalVal.Text = "$0.00";
+            this.lblSubTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDiscountTitle
+            // 
+            this.lblDiscountTitle.AutoSize = true;
+            this.lblDiscountTitle.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.lblDiscountTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblDiscountTitle.Location = new System.Drawing.Point(14, 36);
+            this.lblDiscountTitle.Name = "lblDiscountTitle";
+            this.lblDiscountTitle.Size = new System.Drawing.Size(99, 21);
+            this.lblDiscountTitle.TabIndex = 2;
+            this.lblDiscountTitle.Text = "Discount ($):";
+            // 
+            // numDiscount
+            // 
+            this.numDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.numDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numDiscount.DecimalPlaces = 2;
+            this.numDiscount.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.numDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(158)))), ((int)(((byte)(11)))));
+            this.numDiscount.Location = new System.Drawing.Point(545, 34);
+            this.numDiscount.Maximum = new decimal(new int[] { 999999, 0, 0, 0 });
+            this.numDiscount.Name = "numDiscount";
+            this.numDiscount.Size = new System.Drawing.Size(130, 29);
+            this.numDiscount.TabIndex = 3;
+            this.numDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDiscount.ValueChanged += new System.EventHandler(this.numDiscount_ValueChanged);
+            // 
+            // pnlCheckoutDivider
+            // 
+            this.pnlCheckoutDivider.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCheckoutDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.pnlCheckoutDivider.Location = new System.Drawing.Point(14, 68);
+            this.pnlCheckoutDivider.Name = "pnlCheckoutDivider";
+            this.pnlCheckoutDivider.Size = new System.Drawing.Size(661, 1);
+            this.pnlCheckoutDivider.TabIndex = 4;
+            // 
+            // lblGrandTotalTitle
+            // 
+            this.lblGrandTotalTitle.AutoSize = true;
+            this.lblGrandTotalTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblGrandTotalTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblGrandTotalTitle.Location = new System.Drawing.Point(14, 76);
+            this.lblGrandTotalTitle.Name = "lblGrandTotalTitle";
+            this.lblGrandTotalTitle.Size = new System.Drawing.Size(126, 28);
+            this.lblGrandTotalTitle.TabIndex = 5;
+            this.lblGrandTotalTitle.Text = "TOTAL DUE:";
+            // 
+            // lblGrandTotalVal
+            // 
+            this.lblGrandTotalVal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGrandTotalVal.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.lblGrandTotalVal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblGrandTotalVal.Location = new System.Drawing.Point(410, 72);
+            this.lblGrandTotalVal.Name = "lblGrandTotalVal";
+            this.lblGrandTotalVal.Size = new System.Drawing.Size(265, 32);
+            this.lblGrandTotalVal.TabIndex = 6;
+            this.lblGrandTotalVal.Text = "$0.00";
+            this.lblGrandTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblGrandTotalKHR
+            // 
+            this.lblGrandTotalKHR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblGrandTotalKHR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblGrandTotalKHR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.lblGrandTotalKHR.Location = new System.Drawing.Point(410, 102);
+            this.lblGrandTotalKHR.Name = "lblGrandTotalKHR";
+            this.lblGrandTotalKHR.Size = new System.Drawing.Size(265, 20);
+            this.lblGrandTotalKHR.TabIndex = 7;
+            this.lblGrandTotalKHR.Text = "KHR ~ 0 ៛";
+            this.lblGrandTotalKHR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblPayMethod
+            // 
+            this.lblPayMethod.AutoSize = true;
+            this.lblPayMethod.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPayMethod.Location = new System.Drawing.Point(14, 130);
+            this.lblPayMethod.Name = "lblPayMethod";
+            this.lblPayMethod.Size = new System.Drawing.Size(68, 20);
+            this.lblPayMethod.TabIndex = 8;
+            this.lblPayMethod.Text = "Method:";
+            // 
+            // cboPayMethod
+            // 
+            this.cboPayMethod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboPayMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPayMethod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPayMethod.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.cboPayMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboPayMethod.FormattingEnabled = true;
+            this.cboPayMethod.Items.AddRange(new object[] { "Cash", "KHQR / ABA", "Wing", "Card" });
+            this.cboPayMethod.Location = new System.Drawing.Point(85, 126);
+            this.cboPayMethod.Name = "cboPayMethod";
+            this.cboPayMethod.Size = new System.Drawing.Size(115, 28);
+            this.cboPayMethod.TabIndex = 9;
+            // 
+            // lblPaid
+            // 
+            this.lblPaid.AutoSize = true;
+            this.lblPaid.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblPaid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPaid.Location = new System.Drawing.Point(205, 130);
+            this.lblPaid.Name = "lblPaid";
+            this.lblPaid.Size = new System.Drawing.Size(42, 20);
+            this.lblPaid.TabIndex = 10;
+            this.lblPaid.Text = "Paid:";
+            // 
+            // txtPaidAmount
+            // 
+            this.txtPaidAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtPaidAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPaidAmount.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.txtPaidAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.txtPaidAmount.Location = new System.Drawing.Point(250, 126);
+            this.txtPaidAmount.Name = "txtPaidAmount";
+            this.txtPaidAmount.Size = new System.Drawing.Size(75, 31);
+            this.txtPaidAmount.TabIndex = 11;
+            this.txtPaidAmount.Text = "0.00";
+            this.txtPaidAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPaidAmount.TextChanged += new System.EventHandler(this.txtPaidAmount_TextChanged);
+            this.txtPaidAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaidAmount_KeyPress);
+            // 
+            // btnExactPay
+            // 
+            this.btnExactPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnExactPay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExactPay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(80)))));
+            this.btnExactPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExactPay.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnExactPay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(182)))), ((int)(((byte)(212)))));
+            this.btnExactPay.Location = new System.Drawing.Point(330, 126);
+            this.btnExactPay.Name = "btnExactPay";
+            this.btnExactPay.Size = new System.Drawing.Size(52, 28);
+            this.btnExactPay.TabIndex = 12;
+            this.btnExactPay.Text = "Exact";
+            this.btnExactPay.UseVisualStyleBackColor = false;
+            this.btnExactPay.Click += new System.EventHandler(this.btnExactPay_Click);
+            // 
+            // lblChangeVal
+            // 
+            this.lblChangeVal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChangeVal.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblChangeVal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.lblChangeVal.Location = new System.Drawing.Point(390, 126);
+            this.lblChangeVal.Name = "lblChangeVal";
+            this.lblChangeVal.Size = new System.Drawing.Size(285, 26);
+            this.lblChangeVal.TabIndex = 13;
+            this.lblChangeVal.Text = "+$0.00 (0 ៛)";
+            this.lblChangeVal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnSaveSale
+            // 
+            this.btnSaveSale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(185)))), ((int)(((byte)(129)))));
+            this.btnSaveSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveSale.FlatAppearance.BorderSize = 0;
+            this.btnSaveSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSale.Font = new System.Drawing.Font("Segoe UI", 11.5F, System.Drawing.FontStyle.Bold);
+            this.btnSaveSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(14)))), ((int)(((byte)(23)))));
+            this.btnSaveSale.Location = new System.Drawing.Point(14, 168);
+            this.btnSaveSale.Name = "btnSaveSale";
+            this.btnSaveSale.Size = new System.Drawing.Size(535, 50);
+            this.btnSaveSale.TabIndex = 14;
+            this.btnSaveSale.Text = "💳 PAY & COMPLETE ORDER";
+            this.btnSaveSale.UseMnemonic = false;
+            this.btnSaveSale.UseVisualStyleBackColor = false;
+            this.btnSaveSale.Click += new System.EventHandler(this.btnSaveSale_Click);
+            // 
+            // btnClearCart
+            // 
+            this.btnClearCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.btnClearCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClearCart.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.btnClearCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearCart.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnClearCart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.btnClearCart.Location = new System.Drawing.Point(555, 168);
+            this.btnClearCart.Name = "btnClearCart";
+            this.btnClearCart.Size = new System.Drawing.Size(120, 50);
+            this.btnClearCart.TabIndex = 15;
+            this.btnClearCart.Text = "✕ Clear";
+            this.btnClearCart.UseVisualStyleBackColor = false;
+            this.btnClearCart.Click += new System.EventHandler(this.btnClearCart_Click);
             // 
             // pnlSaleItems
             // 
             this.pnlSaleItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(28)))), ((int)(((byte)(45)))));
             this.pnlSaleItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSaleItems.Controls.Add(this.dgCart);
-            this.pnlSaleItems.Controls.Add(this.lblItemsHeader);
             this.pnlSaleItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSaleItems.Location = new System.Drawing.Point(11, 178);
+            this.pnlSaleItems.Location = new System.Drawing.Point(8, 64);
             this.pnlSaleItems.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSaleItems.Name = "pnlSaleItems";
-            this.pnlSaleItems.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
-            this.pnlSaleItems.Size = new System.Drawing.Size(1072, 526);
+            this.pnlSaleItems.Padding = new System.Windows.Forms.Padding(0);
+            this.pnlSaleItems.Size = new System.Drawing.Size(691, 481);
             this.pnlSaleItems.TabIndex = 1;
             // 
             // dgCart
@@ -719,7 +848,9 @@ namespace POS_204_oracle.uc
             this.dgCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCartProdId,
             this.colCartProdName,
+            this.colCartQtyMinus,
             this.colCartQty,
+            this.colCartQtyPlus,
             this.colCartPrice,
             this.colCartTotal,
             this.colCartAction});
@@ -733,15 +864,15 @@ namespace POS_204_oracle.uc
             this.dgCart.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgCart.EnableHeadersVisualStyles = false;
-            this.dgCart.Location = new System.Drawing.Point(11, 42);
-            this.dgCart.Margin = new System.Windows.Forms.Padding(4);
+            this.dgCart.Location = new System.Drawing.Point(0, 0);
+            this.dgCart.Margin = new System.Windows.Forms.Padding(0);
             this.dgCart.MultiSelect = false;
             this.dgCart.Name = "dgCart";
             this.dgCart.RowHeadersVisible = false;
             this.dgCart.RowHeadersWidth = 51;
-            this.dgCart.RowTemplate.Height = 36;
+            this.dgCart.RowTemplate.Height = 38;
             this.dgCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgCart.Size = new System.Drawing.Size(1048, 472);
+            this.dgCart.Size = new System.Drawing.Size(691, 481);
             this.dgCart.TabIndex = 1;
             this.dgCart.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCart_CellContentClick);
             this.dgCart.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCart_CellValueChanged);
@@ -762,16 +893,37 @@ namespace POS_204_oracle.uc
             this.colCartProdName.Name = "colCartProdName";
             this.colCartProdName.ReadOnly = true;
             // 
+            // colCartQtyMinus
+            // 
+            this.colCartQtyMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCartQtyMinus.HeaderText = "";
+            this.colCartQtyMinus.MinimumWidth = 6;
+            this.colCartQtyMinus.Name = "colCartQtyMinus";
+            this.colCartQtyMinus.Text = "−";
+            this.colCartQtyMinus.UseColumnTextForButtonValue = true;
+            this.colCartQtyMinus.Width = 36;
+            // 
             // colCartQty
             // 
-            this.colCartQty.FillWeight = 55F;
+            this.colCartQty.FillWeight = 45F;
             this.colCartQty.HeaderText = "Qty";
             this.colCartQty.MinimumWidth = 6;
             this.colCartQty.Name = "colCartQty";
+            this.colCartQty.ReadOnly = true;
+            // 
+            // colCartQtyPlus
+            // 
+            this.colCartQtyPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCartQtyPlus.HeaderText = "";
+            this.colCartQtyPlus.MinimumWidth = 6;
+            this.colCartQtyPlus.Name = "colCartQtyPlus";
+            this.colCartQtyPlus.Text = "+";
+            this.colCartQtyPlus.UseColumnTextForButtonValue = true;
+            this.colCartQtyPlus.Width = 36;
             // 
             // colCartPrice
             // 
-            this.colCartPrice.FillWeight = 70F;
+            this.colCartPrice.FillWeight = 65F;
             this.colCartPrice.HeaderText = "Price";
             this.colCartPrice.MinimumWidth = 6;
             this.colCartPrice.Name = "colCartPrice";
@@ -787,24 +939,13 @@ namespace POS_204_oracle.uc
             // 
             // colCartAction
             // 
-            this.colCartAction.FillWeight = 45F;
-            this.colCartAction.HeaderText = "Action";
+            this.colCartAction.FillWeight = 38F;
+            this.colCartAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.colCartAction.HeaderText = "";
             this.colCartAction.MinimumWidth = 6;
             this.colCartAction.Name = "colCartAction";
             this.colCartAction.Text = "✕";
             this.colCartAction.UseColumnTextForButtonValue = true;
-            // 
-            // lblItemsHeader
-            // 
-            this.lblItemsHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblItemsHeader.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lblItemsHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.lblItemsHeader.Location = new System.Drawing.Point(11, 10);
-            this.lblItemsHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblItemsHeader.Name = "lblItemsHeader";
-            this.lblItemsHeader.Size = new System.Drawing.Size(1048, 32);
-            this.lblItemsHeader.TabIndex = 0;
-            this.lblItemsHeader.Text = "SALE ITEMS";
             // 
             // tlpSummary
             // 
@@ -1278,8 +1419,10 @@ namespace POS_204_oracle.uc
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(613, 810);
+            this.pnlLeft.Size = new System.Drawing.Size(1000, 810);
             this.pnlLeft.TabIndex = 0;
+            this.pnlSaleInfo.Visible = false;
+            this.tlpSummary.Visible = false;
             // 
             // flpProducts
             // 
@@ -1413,8 +1556,12 @@ namespace POS_204_oracle.uc
             this.flpHistLeft.PerformLayout();
             this.pnlPOS.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
+            this.pnlCartHeader.ResumeLayout(false);
+            this.pnlCartHeader.PerformLayout();
             this.pnlSaleItems.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgCart)).EndInit();
+            this.pnlCheckout.ResumeLayout(false);
+            this.pnlCheckout.PerformLayout();
             this.tlpSummary.ResumeLayout(false);
             this.pnlCardGrandTotal.ResumeLayout(false);
             this.pnlCardDiscount.ResumeLayout(false);
@@ -1589,13 +1736,29 @@ namespace POS_204_oracle.uc
 
         private System.Windows.Forms.DataGridViewTextBoxColumn colCartProdName;
 
+        private System.Windows.Forms.DataGridViewButtonColumn colCartQtyMinus;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn colCartQty;
+
+        private System.Windows.Forms.DataGridViewButtonColumn colCartQtyPlus;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn colCartPrice;
 
         private System.Windows.Forms.DataGridViewTextBoxColumn colCartTotal;
 
         private System.Windows.Forms.DataGridViewButtonColumn colCartAction;
+
+        private System.Windows.Forms.Panel pnlCartHeader;
+
+        private System.Windows.Forms.Label lblOrderTitle;
+
+        private System.Windows.Forms.Label lblOrderBadge;
+
+        private System.Windows.Forms.Panel pnlCheckout;
+
+        private System.Windows.Forms.Panel pnlCheckoutDivider;
+
+        private System.Windows.Forms.Label lblGrandTotalKHR;
 
     }
 

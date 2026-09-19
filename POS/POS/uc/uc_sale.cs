@@ -77,7 +77,9 @@ namespace POS_204_oracle.uc
             txtItemNotes.Clear();
             numDiscount.Value = 0;
             dgCart.Rows.Clear();
-            btnSaveSale.Text = "💳 Pay & Complete";
+            btnSaveSale.Text = "💳 PAY & COMPLETE ORDER";
+            if (lblOrderTitle != null) lblOrderTitle.Text = "CURRENT ORDER";
+            if (lblOrderBadge != null) lblOrderBadge.Text = $"#SO-{DateTime.Now:HHmmss}";
             if (cboPayMethod != null && cboPayMethod.Items.Count > 0) cboPayMethod.SelectedIndex = 0;
             isUserPaidEdited = false;
             if (txtPaidAmount != null) txtPaidAmount.Text = "0.00";
@@ -255,25 +257,29 @@ namespace POS_204_oracle.uc
 
                 Panel card = new Panel
                 {
-                    Width = 118,
-                    Height = 155,
+                    Width = 142,
+                    Height = 175,
                     BackColor = Color.FromArgb(20, 28, 45),
-                    Margin = new Padding(5),
+                    Margin = new Padding(6),
                     Cursor = Cursors.Hand,
                     Tag = prodId
                 };
 
-                // Border paint
+                bool isHovered = false;
                 card.Paint += (s, pe) =>
                 {
-                    pe.Graphics.DrawRectangle(new Pen(Color.FromArgb(38, 52, 80), 1), 0, 0, card.Width - 1, card.Height - 1);
+                    Color borderColor = isHovered ? Color.FromArgb(16, 185, 129) : Color.FromArgb(38, 52, 80);
+                    using (Pen pen = new Pen(borderColor, isHovered ? 2 : 1))
+                    {
+                        pe.Graphics.DrawRectangle(pen, 0, 0, card.Width - 1, card.Height - 1);
+                    }
                 };
 
                 // Product Image
                 PictureBox pb = new PictureBox
                 {
                     Dock = DockStyle.Top,
-                    Height = 80,
+                    Height = 90,
                     SizeMode = PictureBoxSizeMode.Zoom,
                     BackColor = Color.FromArgb(10, 14, 23),
                     Tag = prodId
@@ -300,7 +306,7 @@ namespace POS_204_oracle.uc
                 {
                     pb.Paint += (s, pe) =>
                     {
-                        pe.Graphics.DrawString("📦", new Font("Segoe UI", 22), Brushes.SlateGray, new PointF(36, 18));
+                        pe.Graphics.DrawString("📦", new Font("Segoe UI", 24), Brushes.SlateGray, new PointF(48, 22));
                     };
                 }
 
@@ -308,23 +314,23 @@ namespace POS_204_oracle.uc
                 Label lblName = new Label
                 {
                     Dock = DockStyle.Top,
-                    Height = 30,
+                    Height = 32,
                     Text = prodName,
-                    Font = new Font("Segoe UI", 8.25F, FontStyle.Bold),
+                    Font = new Font("Segoe UI", 8.5F, FontStyle.Bold),
                     ForeColor = Color.FromArgb(248, 250, 252),
                     TextAlign = ContentAlignment.MiddleCenter,
                     AutoEllipsis = true,
                     Tag = prodId
                 };
 
-                // Stock label
+                // Stock label (pill style)
                 Label lblStock = new Label
                 {
                     Dock = DockStyle.Top,
-                    Height = 16,
-                    Text = stock <= 0 ? "Out of Stock" : $"Stock: {stock:N0}",
-                    Font = new Font("Segoe UI", 7F, stock <= 0 ? FontStyle.Bold : FontStyle.Regular),
-                    ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(148, 163, 184),
+                    Height = 18,
+                    Text = stock <= 0 ? "● Out of Stock" : $"● {stock:N0} in stock",
+                    Font = new Font("Segoe UI", 7.5F, stock <= 0 ? FontStyle.Bold : FontStyle.Regular),
+                    ForeColor = stock <= 0 ? Color.FromArgb(239, 68, 68) : Color.FromArgb(16, 185, 129),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };
@@ -333,18 +339,32 @@ namespace POS_204_oracle.uc
                 Label lblPrice = new Label
                 {
                     Dock = DockStyle.Bottom,
-                    Height = 22,
+                    Height = 28,
                     Text = $"${price:N2}",
-                    Font = new Font("Segoe UI", 9.5F, FontStyle.Bold),
-                    ForeColor = Color.FromArgb(16, 185, 129), // Emerald
+                    Font = new Font("Segoe UI", 10F, FontStyle.Bold),
+                    ForeColor = Color.FromArgb(16, 185, 129),
                     TextAlign = ContentAlignment.MiddleCenter,
                     Tag = prodId
                 };
 
-                // Routed click handler on card and all children
+                // Routed click & hover handlers
                 EventHandler onCardClick = (s, pe) =>
                 {
                     OnProductCardClicked(prodId);
+                };
+
+                EventHandler onEnter = (s, pe) =>
+                {
+                    isHovered = true;
+                    card.BackColor = Color.FromArgb(26, 36, 58);
+                    card.Invalidate();
+                };
+
+                EventHandler onLeave = (s, pe) =>
+                {
+                    isHovered = false;
+                    card.BackColor = Color.FromArgb(20, 28, 45);
+                    card.Invalidate();
                 };
 
                 card.Click += onCardClick;
@@ -352,6 +372,18 @@ namespace POS_204_oracle.uc
                 lblName.Click += onCardClick;
                 lblStock.Click += onCardClick;
                 lblPrice.Click += onCardClick;
+
+                card.MouseEnter += onEnter;
+                pb.MouseEnter += onEnter;
+                lblName.MouseEnter += onEnter;
+                lblStock.MouseEnter += onEnter;
+                lblPrice.MouseEnter += onEnter;
+
+                card.MouseLeave += onLeave;
+                pb.MouseLeave += onLeave;
+                lblName.MouseLeave += onLeave;
+                lblStock.MouseLeave += onLeave;
+                lblPrice.MouseLeave += onLeave;
 
                 // Add in reverse order of docking
                 card.Controls.Add(lblStock);
@@ -462,15 +494,21 @@ namespace POS_204_oracle.uc
             int rowIndex = dgCart.Rows.Add(
                 prodId,
                 prodName,
+                "−",
                 qtyToAdd,
+                "+",
                 $"${unitPrice:N2}",
                 $"${(qtyToAdd * unitPrice):N2}",
                 "✕"
             );
 
             // Format action button
-            dgCart.Rows[rowIndex].Cells["colCartAction"].Style.ForeColor = Color.FromArgb(220, 38, 38);
+            dgCart.Rows[rowIndex].Cells["colCartAction"].Style.ForeColor = Color.FromArgb(239, 68, 68);
             dgCart.Rows[rowIndex].Cells["colCartAction"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            dgCart.Rows[rowIndex].Cells["colCartQtyMinus"].Style.ForeColor = Color.FromArgb(239, 68, 68);
+            dgCart.Rows[rowIndex].Cells["colCartQtyMinus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dgCart.Rows[rowIndex].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(16, 185, 129);
+            dgCart.Rows[rowIndex].Cells["colCartQtyPlus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
 
             AutoSum();
         }
@@ -511,6 +549,16 @@ namespace POS_204_oracle.uc
                 lblTotalItemsVal.Text = totalItems.ToString("N0");
                 lblSubTotalVal.Text = $"${subTotal:N2}";
                 lblGrandTotalVal.Text = $"${grandTotal:N2}";
+
+                if (lblGrandTotalKHR != null)
+                {
+                    lblGrandTotalKHR.Text = $"KHR ~ {(grandTotal * 4100m):N0} ៛";
+                }
+
+                if (btnSaveSale != null)
+                {
+                    btnSaveSale.Text = grandTotal > 0 ? $"💳 PAY & COMPLETE (${grandTotal:N2})" : "💳 PAY & COMPLETE ORDER";
+                }
 
                 if (txtPaidAmount != null)
                 {
@@ -638,10 +686,37 @@ namespace POS_204_oracle.uc
         {
             if (e.RowIndex < 0) return;
 
-            // Delete item button column
-            if (dgCart.Columns[e.ColumnIndex].Name == "colCartAction")
+            string colName = dgCart.Columns[e.ColumnIndex].Name;
+            if (colName == "colCartAction")
             {
                 dgCart.Rows.RemoveAt(e.RowIndex);
+                AutoSum();
+            }
+            else if (colName == "colCartQtyPlus")
+            {
+                int prodId = Convert.ToInt32(dgCart.Rows[e.RowIndex].Cells["colCartProdId"].Value);
+                string prodName = dgCart.Rows[e.RowIndex].Cells["colCartProdName"].Value?.ToString() ?? "Product";
+                decimal availStock = GetAvailableStock(prodId);
+                decimal currentQty = Convert.ToDecimal(dgCart.Rows[e.RowIndex].Cells["colCartQty"].Value);
+                if (currentQty + 1 > availStock)
+                {
+                    MessageBox.Show($"Cannot add more '{prodName}'. Available stock is only {availStock:N0} unit(s).", "Stock Limit Reached", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                dgCart.Rows[e.RowIndex].Cells["colCartQty"].Value = currentQty + 1;
+                AutoSum();
+            }
+            else if (colName == "colCartQtyMinus")
+            {
+                decimal currentQty = Convert.ToDecimal(dgCart.Rows[e.RowIndex].Cells["colCartQty"].Value);
+                if (currentQty <= 1)
+                {
+                    dgCart.Rows.RemoveAt(e.RowIndex);
+                }
+                else
+                {
+                    dgCart.Rows[e.RowIndex].Cells["colCartQty"].Value = currentQty - 1;
+                }
                 AutoSum();
             }
         }
@@ -1071,9 +1146,13 @@ namespace POS_204_oracle.uc
                     decimal price = Convert.ToDecimal(r["sale_price"]);
                     decimal total = Convert.ToDecimal(r["item_grand_total"]);
 
-                    int idx = dgCart.Rows.Add(pId, pName, qty, $"${price:N2}", $"${total:N2}", "✕");
-                    dgCart.Rows[idx].Cells["colCartAction"].Style.ForeColor = Color.FromArgb(220, 38, 38);
+                    int idx = dgCart.Rows.Add(pId, pName, "−", qty, "+", $"${price:N2}", $"${total:N2}", "✕");
+                    dgCart.Rows[idx].Cells["colCartAction"].Style.ForeColor = Color.FromArgb(239, 68, 68);
                     dgCart.Rows[idx].Cells["colCartAction"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    dgCart.Rows[idx].Cells["colCartQtyMinus"].Style.ForeColor = Color.FromArgb(239, 68, 68);
+                    dgCart.Rows[idx].Cells["colCartQtyMinus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+                    dgCart.Rows[idx].Cells["colCartQtyPlus"].Style.ForeColor = Color.FromArgb(16, 185, 129);
+                    dgCart.Rows[idx].Cells["colCartQtyPlus"].Style.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
                 }
 
                 // Set discount & notes

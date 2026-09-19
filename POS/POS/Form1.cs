@@ -35,21 +35,29 @@ namespace POS_204_oracle
             };
         }
 
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            if (lblClock != null)
+            {
+                lblClock.Text = DateTime.Now.ToString("hh:mm:ss tt  •  ddd, MMM dd yyyy");
+            }
+        }
+
         private void SetActiveNavButton(Button activeButton)
         {
             foreach (Button btn in navButtons)
             {
                 if (btn == activeButton)
                 {
-                    btn.BackColor = UITheme.Primary;
-                    btn.ForeColor = Color.White;
-                    btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+                    btn.BackColor = Color.FromArgb(16, 185, 129); // Emerald active
+                    btn.ForeColor = Color.FromArgb(10, 14, 23); // Dark text on bright emerald
+                    btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
                 }
                 else
                 {
-                    btn.BackColor = UITheme.BgSidebar;
-                    btn.ForeColor = UITheme.TextMuted;
-                    btn.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+                    btn.BackColor = Color.FromArgb(13, 18, 30);
+                    btn.ForeColor = Color.FromArgb(148, 163, 184);
+                    btn.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
                 }
             }
         }
@@ -88,6 +96,11 @@ namespace POS_204_oracle
 
         private void SyncNavButtonWithTab(string tabTitle)
         {
+            if (lblBreadcrumb != null && !string.IsNullOrEmpty(tabTitle))
+            {
+                lblBreadcrumb.Text = $"SYSTEM  ›  {tabTitle.ToUpper()}";
+            }
+
             switch (tabTitle?.ToUpper())
             {
                 case "DASHBOARD":
@@ -132,6 +145,9 @@ namespace POS_204_oracle
             string displayRole = string.IsNullOrEmpty(Program.UserType) ? "Admin" : Program.UserType;
             lbluser.Text = $"{displayName} ({displayRole})";
 
+            // Initialize clock text immediately
+            timerClock_Tick(this, EventArgs.Empty);
+
             // Setup company branding
             SettingController.OnSettingsChanged += LoadCompanyBranding;
             SettingController settingCtrl = new SettingController();
@@ -157,10 +173,13 @@ namespace POS_204_oracle
                 btnStock.Visible = false;
                 btnReport.Visible = false;
                 btnSetting.Visible = false;
+                if (lblNavInventory != null) lblNavInventory.Visible = false;
+                if (lblNavSystem != null) lblNavSystem.Visible = false;
 
                 btnDashboard.Visible = true;
                 btnCustomer.Visible = true;
                 btnSale.Visible = true;
+                if (lblNavSales != null) lblNavSales.Visible = true;
                 btnExit.Visible = true;
 
                 navButtons.RemoveAll(b => !b.Visible);
